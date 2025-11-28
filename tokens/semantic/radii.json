@@ -1,0 +1,56 @@
+{
+  "radius": {
+    "button": {
+      "$value": "{radius.primitive.md}",
+      "$type": "dimension",
+      "$description": "Button border radius"
+    },
+    "card": {
+      "$value": "{radius.primitive.lg}",
+      "$type": "dimension",
+      "$description": "Card border radius"
+    },
+    "input": {
+      "$value": "{radius.primitive.sm}",
+      "$type": "dimension",
+      "$description": "Input field border radius"
+    },
+    "modal": {
+      "$value": "{radius.primitive.xl}",
+      "$type": "dimension",
+      "$description": "Modal/dialog border radius"
+    },
+    "badge": {
+      "$value": "{radius.primitive.full}",
+      "$type": "dimension",
+      "$description": "Badge pill shape"
+    },
+    "chip": {
+      "$value": "{radius.primitive.md}",
+      "$type": "dimension",
+      "$description": "Chip border radius"
+    },
+    "avatar": {
+      "$value": "{radius.primitive.full}",
+      "$type": "dimension",
+      "$description": "Avatar circle shape"
+    },
+    "image": {
+      "$value": "{radius.primitive.lg}",
+      "$type": "dimension"
+    },
+    "tooltip": {
+      "$value": "{radius.primitive.sm}",
+      "$type": "dimension"
+    },
+    "popover": {
+      "$value": "{radius.primitive.md}",
+      "$type": "dimension"
+    },
+    "fab": {
+      "$value": "{radius.primitive.xl}",
+      "$type": "dimension",
+      "$description": "Floating action button - Material Design 3"
+    }
+  }
+}

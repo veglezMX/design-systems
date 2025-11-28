@@ -1,0 +1,63 @@
+{
+  "shadow": {
+    "card": {
+      "$value": "{shadow.primitive.level-1}",
+      "$type": "shadow",
+      "$description": "Card elevation"
+    },
+    "modal": {
+      "$value": "{shadow.primitive.level-5}",
+      "$type": "shadow",
+      "$description": "Modal/dialog elevation"
+    },
+    "dropdown": {
+      "$value": "{shadow.primitive.level-3}",
+      "$type": "shadow",
+      "$description": "Dropdown menu elevation"
+    },
+    "popover": {
+      "$value": "{shadow.primitive.level-2}",
+      "$type": "shadow",
+      "$description": "Popover elevation"
+    },
+    "tooltip": {
+      "$value": "{shadow.primitive.level-2}",
+      "$type": "shadow",
+      "$description": "Tooltip elevation"
+    },
+    "fab": {
+      "$value": "{shadow.primitive.level-3}",
+      "$type": "shadow",
+      "$description": "Floating action button elevation - Material Design 3"
+    },
+    "nav-drawer": {
+      "$value": "{shadow.primitive.level-1}",
+      "$type": "shadow",
+      "$description": "Navigation drawer elevation"
+    },
+    "elevation": {
+      "1": {
+        "$value": "{shadow.primitive.level-1}",
+        "$type": "shadow",
+        "$description": "Material Design 3 elevation level 1"
+      },
+      "2": {
+        "$value": "{shadow.primitive.level-2}",
+        "$type": "shadow"
+      },
+      "3": {
+        "$value": "{shadow.primitive.level-3}",
+        "$type": "shadow"
+      },
+      "4": {
+        "$value": "{shadow.primitive.level-4}",
+        "$type": "shadow"
+      },
+      "5": {
+        "$value": "{shadow.primitive.level-5}",
+        "$type": "shadow",
+        "$description": "Material Design 3 elevation level 5"
+      }
+    }
+  }
+}

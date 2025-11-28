@@ -1,0 +1,51 @@
+{
+  "z-index": {
+    "primitive": {
+      "0": {
+        "$value": "0",
+        "$type": "number",
+        "$description": "Base layer"
+      },
+      "1": {
+        "$value": "1",
+        "$type": "number",
+        "$description": "Above base"
+      },
+      "10": {
+        "$value": "10",
+        "$type": "number",
+        "$description": "Dropdowns, popovers"
+      },
+      "100": {
+        "$value": "100",
+        "$type": "number",
+        "$description": "Sticky elements"
+      },
+      "200": {
+        "$value": "200",
+        "$type": "number",
+        "$description": "Fixed elements"
+      },
+      "300": {
+        "$value": "300",
+        "$type": "number",
+        "$description": "Modal backdrops"
+      },
+      "400": {
+        "$value": "400",
+        "$type": "number",
+        "$description": "Modals, dialogs"
+      },
+      "500": {
+        "$value": "500",
+        "$type": "number",
+        "$description": "Tooltips"
+      },
+      "9999": {
+        "$value": "9999",
+        "$type": "number",
+        "$description": "Top-most layer - toasts, notifications"
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "radius": {
+    "primitive": {
+      "none": {
+        "$value": "0",
+        "$type": "dimension",
+        "$description": "No border radius - sharp corners"
+      },
+      "xs": {
+        "$value": "2px",
+        "$type": "dimension",
+        "$description": "Extra small radius"
+      },
+      "sm": {
+        "$value": "4px",
+        "$type": "dimension",
+        "$description": "Small radius - Material Design 3 extra-small shape"
+      },
+      "md": {
+        "$value": "8px",
+        "$type": "dimension",
+        "$description": "Medium radius - Material Design 3 small shape"
+      },
+      "lg": {
+        "$value": "12px",
+        "$type": "dimension",
+        "$description": "Large radius - Material Design 3 medium shape"
+      },
+      "xl": {
+        "$value": "16px",
+        "$type": "dimension",
+        "$description": "Extra large radius - Material Design 3 large shape"
+      },
+      "2xl": {
+        "$value": "24px",
+        "$type": "dimension",
+        "$description": "2x extra large radius - Material Design 3 extra-large shape"
+      },
+      "3xl": {
+        "$value": "28px",
+        "$type": "dimension",
+        "$description": "3x extra large radius"
+      },
+      "full": {
+        "$value": "9999px",
+        "$type": "dimension",
+        "$description": "Full radius - pill/circle shape"
+      }
+    }
+  }
+}

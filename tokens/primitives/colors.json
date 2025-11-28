@@ -11,74 +11,420 @@
         "$type": "color",
         "$description": "Pure black"
       },
-      "blue": {
+      "primary": {
         "50": {
-          "$value": "#e6f2ff",
-          "$type": "color"
-        },
-        "100": {
-          "$value": "#cce5ff",
-          "$type": "color"
-        },
-        "500": {
-          "$value": "#0066ff",
+          "$value": "#e3f2fd",
           "$type": "color",
-          "$description": "Primary brand blue"
-        },
-        "700": {
-          "$value": "#0047b3",
-          "$type": "color"
-        },
-        "900": {
-          "$value": "#002966",
-          "$type": "color"
-        }
-      },
-      "gray": {
-        "50": {
-          "$value": "#f8f9fa",
-          "$type": "color"
+          "$description": "Primary tonal palette - lightest"
         },
         "100": {
-          "$value": "#e9ecef",
+          "$value": "#bbdefb",
           "$type": "color"
         },
         "200": {
-          "$value": "#dee2e6",
+          "$value": "#90caf9",
+          "$type": "color"
+        },
+        "300": {
+          "$value": "#64b5f6",
+          "$type": "color"
+        },
+        "400": {
+          "$value": "#42a5f5",
           "$type": "color"
         },
         "500": {
-          "$value": "#6c757d",
+          "$value": "#2196f3",
+          "$type": "color",
+          "$description": "Primary brand color - Material Design 3 baseline"
+        },
+        "600": {
+          "$value": "#1e88e5",
           "$type": "color"
         },
         "700": {
-          "$value": "#495057",
+          "$value": "#1976d2",
+          "$type": "color"
+        },
+        "800": {
+          "$value": "#1565c0",
           "$type": "color"
         },
         "900": {
-          "$value": "#212529",
-          "$type": "color"
+          "$value": "#0d47a1",
+          "$type": "color",
+          "$description": "Primary tonal palette - darkest"
         }
       },
-      "red": {
-        "500": {
-          "$value": "#dc3545",
+      "secondary": {
+        "50": {
+          "$value": "#fce4ec",
           "$type": "color",
-          "$description": "Error/danger color"
+          "$description": "Secondary tonal palette - lightest"
+        },
+        "100": {
+          "$value": "#f8bbd0",
+          "$type": "color"
+        },
+        "200": {
+          "$value": "#f48fb1",
+          "$type": "color"
+        },
+        "300": {
+          "$value": "#f06292",
+          "$type": "color"
+        },
+        "400": {
+          "$value": "#ec407a",
+          "$type": "color"
+        },
+        "500": {
+          "$value": "#e91e63",
+          "$type": "color",
+          "$description": "Secondary brand color"
+        },
+        "600": {
+          "$value": "#d81b60",
+          "$type": "color"
         },
         "700": {
-          "$value": "#a71d2a",
+          "$value": "#c2185b",
+          "$type": "color"
+        },
+        "800": {
+          "$value": "#ad1457",
+          "$type": "color"
+        },
+        "900": {
+          "$value": "#880e4f",
+          "$type": "color",
+          "$description": "Secondary tonal palette - darkest"
+        }
+      },
+      "tertiary": {
+        "50": {
+          "$value": "#e0f2f1",
+          "$type": "color",
+          "$description": "Tertiary tonal palette - lightest"
+        },
+        "100": {
+          "$value": "#b2dfdb",
+          "$type": "color"
+        },
+        "200": {
+          "$value": "#80cbc4",
+          "$type": "color"
+        },
+        "300": {
+          "$value": "#4db6ac",
+          "$type": "color"
+        },
+        "400": {
+          "$value": "#26a69a",
+          "$type": "color"
+        },
+        "500": {
+          "$value": "#009688",
+          "$type": "color",
+          "$description": "Tertiary accent color"
+        },
+        "600": {
+          "$value": "#00897b",
+          "$type": "color"
+        },
+        "700": {
+          "$value": "#00796b",
+          "$type": "color"
+        },
+        "800": {
+          "$value": "#00695c",
+          "$type": "color"
+        },
+        "900": {
+          "$value": "#004d40",
+          "$type": "color",
+          "$description": "Tertiary tonal palette - darkest"
+        }
+      },
+      "neutral": {
+        "0": {
+          "$value": "#000000",
+          "$type": "color",
+          "$description": "Neutral variant - black"
+        },
+        "10": {
+          "$value": "#1c1b1f",
+          "$type": "color"
+        },
+        "20": {
+          "$value": "#313033",
+          "$type": "color"
+        },
+        "30": {
+          "$value": "#484649",
+          "$type": "color"
+        },
+        "40": {
+          "$value": "#605d62",
+          "$type": "color"
+        },
+        "50": {
+          "$value": "#f5f5f5",
+          "$type": "color"
+        },
+        "60": {
+          "$value": "#8b888f",
+          "$type": "color"
+        },
+        "70": {
+          "$value": "#a6a2a9",
+          "$type": "color"
+        },
+        "80": {
+          "$value": "#c1bdc4",
+          "$type": "color"
+        },
+        "90": {
+          "$value": "#ddd8e0",
+          "$type": "color"
+        },
+        "95": {
+          "$value": "#ece6f0",
+          "$type": "color"
+        },
+        "99": {
+          "$value": "#fcfcfc",
+          "$type": "color"
+        },
+        "100": {
+          "$value": "#ffffff",
+          "$type": "color",
+          "$description": "Neutral variant - white"
+        }
+      },
+      "neutral-variant": {
+        "0": {
+          "$value": "#000000",
+          "$type": "color"
+        },
+        "10": {
+          "$value": "#1a1c1e",
+          "$type": "color"
+        },
+        "20": {
+          "$value": "#2f3033",
+          "$type": "color"
+        },
+        "30": {
+          "$value": "#46474a",
+          "$type": "color"
+        },
+        "40": {
+          "$value": "#5e5e62",
+          "$type": "color"
+        },
+        "50": {
+          "$value": "#77767a",
+          "$type": "color"
+        },
+        "60": {
+          "$value": "#918f93",
+          "$type": "color"
+        },
+        "70": {
+          "$value": "#aba9ad",
+          "$type": "color"
+        },
+        "80": {
+          "$value": "#c7c5c8",
+          "$type": "color"
+        },
+        "90": {
+          "$value": "#e3e1e4",
+          "$type": "color"
+        },
+        "95": {
+          "$value": "#f1eff2",
+          "$type": "color"
+        },
+        "99": {
+          "$value": "#fcfcfc",
+          "$type": "color"
+        },
+        "100": {
+          "$value": "#ffffff",
           "$type": "color"
         }
       },
-      "green": {
+      "error": {
+        "50": {
+          "$value": "#ffebee",
+          "$type": "color"
+        },
+        "100": {
+          "$value": "#ffcdd2",
+          "$type": "color"
+        },
+        "200": {
+          "$value": "#ef9a9a",
+          "$type": "color"
+        },
+        "300": {
+          "$value": "#e57373",
+          "$type": "color"
+        },
+        "400": {
+          "$value": "#ef5350",
+          "$type": "color"
+        },
         "500": {
-          "$value": "#28a745",
+          "$value": "#f44336",
+          "$type": "color",
+          "$description": "Error/danger color - Material Design 3"
+        },
+        "600": {
+          "$value": "#e53935",
+          "$type": "color"
+        },
+        "700": {
+          "$value": "#d32f2f",
+          "$type": "color"
+        },
+        "800": {
+          "$value": "#c62828",
+          "$type": "color"
+        },
+        "900": {
+          "$value": "#b71c1c",
+          "$type": "color"
+        }
+      },
+      "warning": {
+        "50": {
+          "$value": "#fff3e0",
+          "$type": "color"
+        },
+        "100": {
+          "$value": "#ffe0b2",
+          "$type": "color"
+        },
+        "200": {
+          "$value": "#ffcc80",
+          "$type": "color"
+        },
+        "300": {
+          "$value": "#ffb74d",
+          "$type": "color"
+        },
+        "400": {
+          "$value": "#ffa726",
+          "$type": "color"
+        },
+        "500": {
+          "$value": "#ff9800",
+          "$type": "color",
+          "$description": "Warning color"
+        },
+        "600": {
+          "$value": "#fb8c00",
+          "$type": "color"
+        },
+        "700": {
+          "$value": "#f57c00",
+          "$type": "color"
+        },
+        "800": {
+          "$value": "#ef6c00",
+          "$type": "color"
+        },
+        "900": {
+          "$value": "#e65100",
+          "$type": "color"
+        }
+      },
+      "success": {
+        "50": {
+          "$value": "#e8f5e9",
+          "$type": "color"
+        },
+        "100": {
+          "$value": "#c8e6c9",
+          "$type": "color"
+        },
+        "200": {
+          "$value": "#a5d6a7",
+          "$type": "color"
+        },
+        "300": {
+          "$value": "#81c784",
+          "$type": "color"
+        },
+        "400": {
+          "$value": "#66bb6a",
+          "$type": "color"
+        },
+        "500": {
+          "$value": "#4caf50",
           "$type": "color",
           "$description": "Success color"
         },
+        "600": {
+          "$value": "#43a047",
+          "$type": "color"
+        },
         "700": {
-          "$value": "#1e7e34",
+          "$value": "#388e3c",
+          "$type": "color"
+        },
+        "800": {
+          "$value": "#2e7d32",
+          "$type": "color"
+        },
+        "900": {
+          "$value": "#1b5e20",
+          "$type": "color"
+        }
+      },
+      "info": {
+        "50": {
+          "$value": "#e1f5fe",
+          "$type": "color"
+        },
+        "100": {
+          "$value": "#b3e5fc",
+          "$type": "color"
+        },
+        "200": {
+          "$value": "#81d4fa",
+          "$type": "color"
+        },
+        "300": {
+          "$value": "#4fc3f7",
+          "$type": "color"
+        },
+        "400": {
+          "$value": "#29b6f6",
+          "$type": "color"
+        },
+        "500": {
+          "$value": "#03a9f4",
+          "$type": "color",
+          "$description": "Info color"
+        },
+        "600": {
+          "$value": "#039be5",
+          "$type": "color"
+        },
+        "700": {
+          "$value": "#0288d1",
+          "$type": "color"
+        },
+        "800": {
+          "$value": "#0277bd",
+          "$type": "color"
+        },
+        "900": {
+          "$value": "#01579b",
           "$type": "color"
         }
       }

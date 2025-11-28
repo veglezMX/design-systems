@@ -1,0 +1,54 @@
+{
+  "motion": {
+    "fade": {
+      "duration": {
+        "$value": "{motion.duration.short-4}",
+        "$type": "duration"
+      },
+      "easing": {
+        "$value": "{motion.easing.standard}",
+        "$type": "cubicBezier"
+      }
+    },
+    "slide": {
+      "duration": {
+        "$value": "{motion.duration.medium-2}",
+        "$type": "duration"
+      },
+      "easing": {
+        "$value": "{motion.easing.emphasized-decelerate}",
+        "$type": "cubicBezier"
+      }
+    },
+    "scale": {
+      "duration": {
+        "$value": "{motion.duration.short-3}",
+        "$type": "duration"
+      },
+      "easing": {
+        "$value": "{motion.easing.emphasized}",
+        "$type": "cubicBezier"
+      }
+    },
+    "collapse": {
+      "duration": {
+        "$value": "{motion.duration.medium-4}",
+        "$type": "duration"
+      },
+      "easing": {
+        "$value": "{motion.easing.emphasized-accelerate}",
+        "$type": "cubicBezier"
+      }
+    },
+    "expand": {
+      "duration": {
+        "$value": "{motion.duration.medium-4}",
+        "$type": "duration"
+      },
+      "easing": {
+        "$value": "{motion.easing.emphasized-decelerate}",
+        "$type": "cubicBezier"
+      }
+    }
+  }
+}

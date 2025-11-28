@@ -1,0 +1,54 @@
+{
+  "border": {
+    "default": {
+      "width": {
+        "$value": "{border.width.thin}",
+        "$type": "dimension"
+      },
+      "color": {
+        "$value": "{color.outline.default}",
+        "$type": "color"
+      }
+    },
+    "strong": {
+      "width": {
+        "$value": "{border.width.medium}",
+        "$type": "dimension"
+      },
+      "color": {
+        "$value": "{color.outline.variant}",
+        "$type": "color"
+      }
+    },
+    "subtle": {
+      "width": {
+        "$value": "{border.width.thin}",
+        "$type": "dimension"
+      },
+      "color": {
+        "$value": "{color.surface.container}",
+        "$type": "color"
+      }
+    },
+    "focus-ring": {
+      "width": {
+        "$value": "{border.width.medium}",
+        "$type": "dimension"
+      },
+      "color": {
+        "$value": "{color.primary.default}",
+        "$type": "color"
+      }
+    },
+    "divider": {
+      "width": {
+        "$value": "{border.width.thin}",
+        "$type": "dimension"
+      },
+      "color": {
+        "$value": "{color.outline.default}",
+        "$type": "color"
+      }
+    }
+  }
+}

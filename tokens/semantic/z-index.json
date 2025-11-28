@@ -1,0 +1,44 @@
+{
+  "z-index": {
+    "dropdown": {
+      "$value": "{z-index.primitive.10}",
+      "$type": "number",
+      "$description": "Dropdown menus"
+    },
+    "sticky": {
+      "$value": "{z-index.primitive.100}",
+      "$type": "number",
+      "$description": "Sticky headers/footers"
+    },
+    "modal-backdrop": {
+      "$value": "{z-index.primitive.300}",
+      "$type": "number",
+      "$description": "Modal backdrop overlay"
+    },
+    "modal": {
+      "$value": "{z-index.primitive.400}",
+      "$type": "number",
+      "$description": "Modal/dialog"
+    },
+    "drawer": {
+      "$value": "{z-index.primitive.200}",
+      "$type": "number",
+      "$description": "Navigation drawer"
+    },
+    "popover": {
+      "$value": "{z-index.primitive.10}",
+      "$type": "number",
+      "$description": "Popover menus"
+    },
+    "tooltip": {
+      "$value": "{z-index.primitive.500}",
+      "$type": "number",
+      "$description": "Tooltips"
+    },
+    "toast": {
+      "$value": "{z-index.primitive.9999}",
+      "$type": "number",
+      "$description": "Toast notifications - top layer"
+    }
+  }
+}

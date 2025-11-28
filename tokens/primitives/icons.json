@@ -1,0 +1,41 @@
+{
+  "icon": {
+    "size": {
+      "xs": {
+        "$value": "12px",
+        "$type": "dimension",
+        "$description": "Extra small icon - inline text"
+      },
+      "sm": {
+        "$value": "16px",
+        "$type": "dimension",
+        "$description": "Small icon - buttons"
+      },
+      "md": {
+        "$value": "20px",
+        "$type": "dimension",
+        "$description": "Medium icon - Material Design 3 default"
+      },
+      "lg": {
+        "$value": "24px",
+        "$type": "dimension",
+        "$description": "Large icon - app bars, cards"
+      },
+      "xl": {
+        "$value": "32px",
+        "$type": "dimension",
+        "$description": "Extra large icon - feature highlights"
+      },
+      "2xl": {
+        "$value": "48px",
+        "$type": "dimension",
+        "$description": "2x extra large icon - avatars"
+      },
+      "3xl": {
+        "$value": "64px",
+        "$type": "dimension",
+        "$description": "3x extra large icon - hero sections"
+      }
+    }
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "motion": {
+    "duration": {
+      "instant": {
+        "$value": "0ms",
+        "$type": "duration",
+        "$description": "Instant - no animation"
+      },
+      "short-1": {
+        "$value": "50ms",
+        "$type": "duration",
+        "$description": "Material Design 3 short-1 duration"
+      },
+      "short-2": {
+        "$value": "100ms",
+        "$type": "duration",
+        "$description": "Material Design 3 short-2 duration"
+      },
+      "short-3": {
+        "$value": "150ms",
+        "$type": "duration",
+        "$description": "Material Design 3 short-3 duration"
+      },
+      "short-4": {
+        "$value": "200ms",
+        "$type": "duration",
+        "$description": "Material Design 3 short-4 duration"
+      },
+      "medium-1": {
+        "$value": "250ms",
+        "$type": "duration",
+        "$description": "Material Design 3 medium-1 duration"
+      },
+      "medium-2": {
+        "$value": "300ms",
+        "$type": "duration",
+        "$description": "Material Design 3 medium-2 duration"
+      },
+      "medium-3": {
+        "$value": "350ms",
+        "$type": "duration",
+        "$description": "Material Design 3 medium-3 duration"
+      },
+      "medium-4": {
+        "$value": "400ms",
+        "$type": "duration",
+        "$description": "Material Design 3 medium-4 duration"
+      },
+      "long-1": {
+        "$value": "450ms",
+        "$type": "duration",
+        "$description": "Material Design 3 long-1 duration"
+      },
+      "long-2": {
+        "$value": "500ms",
+        "$type": "duration",
+        "$description": "Material Design 3 long-2 duration"
+      },
+      "long-3": {
+        "$value": "550ms",
+        "$type": "duration",
+        "$description": "Material Design 3 long-3 duration"
+      },
+      "long-4": {
+        "$value": "600ms",
+        "$type": "duration",
+        "$description": "Material Design 3 long-4 duration"
+      },
+      "extra-long-1": {
+        "$value": "700ms",
+        "$type": "duration",
+        "$description": "Material Design 3 extra-long-1 duration"
+      },
+      "extra-long-2": {
+        "$value": "800ms",
+        "$type": "duration",
+        "$description": "Material Design 3 extra-long-2 duration"
+      },
+      "extra-long-3": {
+        "$value": "900ms",
+        "$type": "duration",
+        "$description": "Material Design 3 extra-long-3 duration"
+      },
+      "extra-long-4": {
+        "$value": "1000ms",
+        "$type": "duration",
+        "$description": "Material Design 3 extra-long-4 duration"
+      }
+    },
+    "easing": {
+      "linear": {
+        "$value": "cubic-bezier(0, 0, 1, 1)",
+        "$type": "cubicBezier",
+        "$description": "Linear easing"
+      },
+      "standard": {
+        "$value": "cubic-bezier(0.2, 0, 0, 1)",
+        "$type": "cubicBezier",
+        "$description": "Material Design 3 standard easing"
+      },
+      "standard-accelerate": {
+        "$value": "cubic-bezier(0.3, 0, 1, 1)",
+        "$type": "cubicBezier",
+        "$description": "Material Design 3 standard accelerate"
+      },
+      "standard-decelerate": {
+        "$value": "cubic-bezier(0, 0, 0, 1)",
+        "$type": "cubicBezier",
+        "$description": "Material Design 3 standard decelerate"
+      },
+      "emphasized": {
+        "$value": "cubic-bezier(0.2, 0, 0, 1)",
+        "$type": "cubicBezier",
+        "$description": "Material Design 3 emphasized easing"
+      },
+      "emphasized-accelerate": {
+        "$value": "cubic-bezier(0.3, 0, 0.8, 0.15)",
+        "$type": "cubicBezier",
+        "$description": "Material Design 3 emphasized accelerate"
+      },
+      "emphasized-decelerate": {
+        "$value": "cubic-bezier(0.05, 0.7, 0.1, 1)",
+        "$type": "cubicBezier",
+        "$description": "Material Design 3 emphasized decelerate"
+      }
+    }
+  }
+}

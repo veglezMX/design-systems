@@ -1,0 +1,36 @@
+{
+  "breakpoint": {
+    "primitive": {
+      "xs": {
+        "$value": "0px",
+        "$type": "dimension",
+        "$description": "Extra small - mobile portrait"
+      },
+      "sm": {
+        "$value": "600px",
+        "$type": "dimension",
+        "$description": "Small - mobile landscape, Material Design 3 compact"
+      },
+      "md": {
+        "$value": "905px",
+        "$type": "dimension",
+        "$description": "Medium - tablet, Material Design 3 medium"
+      },
+      "lg": {
+        "$value": "1240px",
+        "$type": "dimension",
+        "$description": "Large - desktop, Material Design 3 expanded"
+      },
+      "xl": {
+        "$value": "1440px",
+        "$type": "dimension",
+        "$description": "Extra large - wide desktop, Material Design 3 large"
+      },
+      "2xl": {
+        "$value": "1920px",
+        "$type": "dimension",
+        "$description": "2x extra large - ultra-wide, Material Design 3 extra-large"
+      }
+    }
+  }
+}

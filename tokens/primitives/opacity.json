@@ -1,0 +1,63 @@
+{
+  "opacity": {
+    "primitive": {
+      "0": {
+        "$value": "0",
+        "$type": "number",
+        "$description": "Fully transparent"
+      },
+      "4": {
+        "$value": "0.04",
+        "$type": "number",
+        "$description": "Material Design 3 state layer - 4%"
+      },
+      "8": {
+        "$value": "0.08",
+        "$type": "number",
+        "$description": "Material Design 3 state layer - 8%"
+      },
+      "12": {
+        "$value": "0.12",
+        "$type": "number",
+        "$description": "Material Design 3 state layer - 12%"
+      },
+      "16": {
+        "$value": "0.16",
+        "$type": "number",
+        "$description": "Material Design 3 state layer - 16%"
+      },
+      "38": {
+        "$value": "0.38",
+        "$type": "number",
+        "$description": "Material Design 3 disabled state - 38%"
+      },
+      "50": {
+        "$value": "0.5",
+        "$type": "number",
+        "$description": "Half transparent"
+      },
+      "60": {
+        "$value": "0.6",
+        "$type": "number"
+      },
+      "70": {
+        "$value": "0.7",
+        "$type": "number"
+      },
+      "80": {
+        "$value": "0.8",
+        "$type": "number"
+      },
+      "87": {
+        "$value": "0.87",
+        "$type": "number",
+        "$description": "Material Design 3 high emphasis - 87%"
+      },
+      "100": {
+        "$value": "1",
+        "$type": "number",
+        "$description": "Fully opaque"
+      }
+    }
+  }
+}

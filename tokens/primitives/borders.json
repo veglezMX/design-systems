@@ -1,0 +1,31 @@
+{
+  "border": {
+    "width": {
+      "none": {
+        "$value": "0",
+        "$type": "dimension",
+        "$description": "No border"
+      },
+      "thin": {
+        "$value": "1px",
+        "$type": "dimension",
+        "$description": "Thin border - standard"
+      },
+      "medium": {
+        "$value": "2px",
+        "$type": "dimension",
+        "$description": "Medium border"
+      },
+      "thick": {
+        "$value": "4px",
+        "$type": "dimension",
+        "$description": "Thick border"
+      },
+      "heavy": {
+        "$value": "8px",
+        "$type": "dimension",
+        "$description": "Heavy border"
+      }
+    }
+  }
+}

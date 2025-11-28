@@ -1,0 +1,111 @@
+{
+  "shadow": {
+    "primitive": {
+      "none": {
+        "$value": "none",
+        "$type": "shadow",
+        "$description": "No shadow - Material Design 3 elevation 0"
+      },
+      "level-1": {
+        "$value": [
+          {
+            "color": "rgba(0, 0, 0, 0.2)",
+            "offsetX": "0",
+            "offsetY": "1px",
+            "blur": "2px",
+            "spread": "0"
+          },
+          {
+            "color": "rgba(0, 0, 0, 0.12)",
+            "offsetX": "0",
+            "offsetY": "1px",
+            "blur": "3px",
+            "spread": "0"
+          }
+        ],
+        "$type": "shadow",
+        "$description": "Material Design 3 elevation 1 (1dp)"
+      },
+      "level-2": {
+        "$value": [
+          {
+            "color": "rgba(0, 0, 0, 0.2)",
+            "offsetX": "0",
+            "offsetY": "2px",
+            "blur": "4px",
+            "spread": "0"
+          },
+          {
+            "color": "rgba(0, 0, 0, 0.12)",
+            "offsetX": "0",
+            "offsetY": "1px",
+            "blur": "5px",
+            "spread": "0"
+          }
+        ],
+        "$type": "shadow",
+        "$description": "Material Design 3 elevation 2 (2dp)"
+      },
+      "level-3": {
+        "$value": [
+          {
+            "color": "rgba(0, 0, 0, 0.2)",
+            "offsetX": "0",
+            "offsetY": "4px",
+            "blur": "8px",
+            "spread": "0"
+          },
+          {
+            "color": "rgba(0, 0, 0, 0.12)",
+            "offsetX": "0",
+            "offsetY": "2px",
+            "blur": "6px",
+            "spread": "0"
+          }
+        ],
+        "$type": "shadow",
+        "$description": "Material Design 3 elevation 3 (4dp)"
+      },
+      "level-4": {
+        "$value": [
+          {
+            "color": "rgba(0, 0, 0, 0.2)",
+            "offsetX": "0",
+            "offsetY": "6px",
+            "blur": "12px",
+            "spread": "0"
+          },
+          {
+            "color": "rgba(0, 0, 0, 0.12)",
+            "offsetX": "0",
+            "offsetY": "4px",
+            "blur": "8px",
+            "spread": "0"
+          }
+        ],
+        "$type": "shadow",
+        "$description": "Material Design 3 elevation 4 (6dp)"
+      },
+      "level-5": {
+        "$value": [
+          {
+            "color": "rgba(0, 0, 0, 0.2)",
+            "offsetX": "0",
+            "offsetY": "8px",
+            "blur": "16px",
+            "spread": "0"
+          },
+          {
+            "color": "rgba(0, 0, 0, 0.12)",
+            "offsetX": "0",
+            "offsetY": "6px",
+            "blur": "12px",
+            "spread": "0"
+          }
+        ],
+        "$type": "shadow",
+        "$description": "Material Design 3 elevation 5 (8dp+)"
+      }
+    }
+  }
+}

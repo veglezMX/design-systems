@@ -1,0 +1,29 @@
+{
+  "opacity": {
+    "hover-overlay": {
+      "$value": "{opacity.primitive.8}",
+      "$type": "number",
+      "$description": "Material Design 3 hover state layer - 8%"
+    },
+    "focus-overlay": {
+      "$value": "{opacity.primitive.12}",
+      "$type": "number",
+      "$description": "Material Design 3 focus state layer - 12%"
+    },
+    "active-overlay": {
+      "$value": "{opacity.primitive.12}",
+      "$type": "number",
+      "$description": "Material Design 3 pressed/active state - 12%"
+    },
+    "disabled": {
+      "$value": "{opacity.primitive.38}",
+      "$type": "number",
+      "$description": "Material Design 3 disabled opacity - 38%"
+    },
+    "scrim": {
+      "$value": "{opacity.primitive.50}",
+      "$type": "number",
+      "$description": "Scrim/backdrop opacity - 50%"
+    }
+  }
+}
