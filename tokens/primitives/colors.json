@@ -34,7 +34,7 @@
           "$type": "color"
         },
         "500": {
-          "$value": "#2196f3",
+          "$value": "#2186f3",
           "$type": "color",
           "$description": "Primary brand color - Material Design 3 baseline"
         },
