@@ -2751,6 +2751,52 @@ jobs:
           file_pattern: 'build/**'
           commit_user_name: 'github-actions[bot]'
           commit_user_email: 'github-actions[bot]@users.noreply.github.com'
+
+### Section 6.1b: Publish built tokens as a package (recommended)
+
+Publishing avoids noisy auto-commit diffs and gives consumers a stable, versioned artifact.
+
+**Prerequisites**
+- `NPM_TOKEN` secret (npm) or use `GITHUB_TOKEN` for GitHub Packages.
+- package.json versioning strategy (semver) and correct `name`/`exports` (already present).
+- Optional: keep `build/` out of git to reduce noise.
+
+**Workflow snippet (replace auto-commit step)**
+```yaml
+    permissions:
+      contents: write
+      packages: write
+
+    steps:
+      # ... checkout, pnpm install, pnpm build
+
+      # Publish to npm (public)
+      - name: Publish package (npm)
+        if: github.ref == 'refs/heads/main'
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: pnpm publish --access public
+
+      # OR publish to GitHub Packages
+      # - name: Publish package (GHP)
+      #   if: github.ref == 'refs/heads/main'
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   run: pnpm publish --registry https://npm.pkg.github.com
+
+      # Optional: upload Flutter artifact
+      # - name: Upload flutter tokens
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: flutter-tokens
+      #     path: build/flutter/tokens.dart
+```
+
+**Consumer usage**
+- Web/React: `npm i @your-scope/design-tokens` then `import '@your-scope/design-tokens/css';`
+- SCSS: `@use '@your-scope/design-tokens/scss';`
+- Vanilla Extract: `import { tokens } from '@your-scope/design-tokens/vanilla-extract';`
+- Flutter: include `tokens.dart` in the package or download the artifact/release asset and import `DSTokens`.
 ```
 
 #### Understanding the Workflow
@@ -2824,8 +2870,8 @@ git push origin main
 
 - [ ] Actions tab shows workflow run
 - [ ] Workflow completes with green checkmark
-- [ ] Auto-commit appears in history
-- [ ] Build files updated with new values
+- [ ] (Package path) New version visible in npm/GitHub Packages
+- [ ] Build files included in published package (css, scss, tokens.dart, tokens.ts)
 
 > ❌ **If Workflow Fails:**
 > 

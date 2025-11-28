@@ -602,8 +602,12 @@ async function build() {
 - [x] Verify repository exists on GitHub
 - [x] Verify you have push access
 - [x] Check repository URL: `git remote -v`
-- [ ] If no remote: `git remote add origin <URL>`
-- [ ] Push current code: `git push -u origin main`
+- [ ] Push current code: `git push -u origin main` (if not already)
+
+### Prepare Publishing Credentials
+- [ ] Add `NPM_TOKEN` secret (for npm public) **or** plan to use `GITHUB_TOKEN` for GitHub Packages
+- [ ] Confirm package.json `name`/`version`/`exports` are correct
+- [ ] (Optional) Add `.npmrc` for GitHub Packages (`@scope:registry=https://npm.pkg.github.com`)
 
 ### Create GitHub Actions Workflow
 - [x] Create `.github/workflows/build-tokens.yml`
@@ -615,8 +619,8 @@ on:
   push:
     branches: [main]
     paths:
-      - 'tokens/**'  # Only trigger on token file changes
-  workflow_dispatch:  # Allow manual trigger
+      - 'tokens/**'
+  workflow_dispatch:
 ```
 
 ### Configure Build Job
@@ -627,7 +631,8 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write  # Required for auto-commit
+      contents: write
+      packages: write
 ```
 
 ### Add Workflow Steps
@@ -664,32 +669,37 @@ jobs:
       - name: Build design tokens
         run: pnpm build
 ```
-- [x] Add auto-commit step:
+- [ ] Add publish step (choose one):
 ```yaml
-      - name: Commit build artifacts
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: '🤖 chore: rebuild design tokens'
-          file_pattern: 'build/**'
-          commit_user_name: 'github-actions[bot]'
-          commit_user_email: 'github-actions[bot]@users.noreply.github.com'
+      # npm public
+      - name: Publish package (npm)
+        if: github.ref == 'refs/heads/main'
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: pnpm publish --access public
+
+      # or GitHub Packages
+      # - name: Publish package (GHP)
+      #   if: github.ref == 'refs/heads/main'
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   run: pnpm publish --registry https://npm.pkg.github.com
 ```
-- [x] Save file
+- [ ] (Optional) Upload Flutter artifact (`build/flutter/tokens.dart`) via `actions/upload-artifact@v4`
+- [ ] Save file
 
 ### Enable GitHub Workflow Permissions
-- [x] Go to GitHub repository
-- [x] Navigate to Settings → Actions → General
-- [x] Scroll to "Workflow permissions"
-- [x] Select "Read and write permissions"
-- [x] Enable "Allow GitHub Actions to create and approve pull requests"
-- [x] Click Save
+- [ ] Go to GitHub repository
+- [ ] Navigate to Settings → Actions → General
+- [ ] Workflow permissions: select **Read and write**
+- [ ] (Optional) Allow Actions to create/approve PRs
+- [ ] Click Save
 
 ### Commit and Push Workflow
-- [x] Stage workflow: `git add .github/workflows/build-tokens.yml`
-- [x] Commit: `git commit -m "ci: add GitHub Actions build workflow"`
-- [x] Push: `git push origin main`
-- [x] Go to GitHub Actions tab
-- [x] Verify workflow file appears in list
+- [ ] Stage workflow: `git add .github/workflows/build-tokens.yml`
+- [ ] Commit: `git commit -m "ci: publish design tokens package"`
+- [ ] Push: `git push origin main`
+- [ ] Go to GitHub Actions tab and verify workflow appears
 
 ### Test Automation (Manual Trigger)
 - [ ] In GitHub Actions tab, click on workflow
@@ -699,15 +709,13 @@ jobs:
 - [ ] Wait for workflow to start
 - [ ] Monitor workflow execution
 - [ ] Verify all steps complete successfully (green checkmarks)
-- [ ] Check for auto-commit in repository
+- [ ] Confirm package version published (npm/GitHub Packages)
+- [ ] (If artifact uploaded) download and verify `tokens.dart`
 
-### Verify Auto-Commit
-- [ ] Go to repository Code tab
-- [ ] Check recent commits
-- [ ] Find "🤖 chore: rebuild design tokens" commit
-- [ ] Verify commit author is "github-actions[bot]"
-- [ ] Click commit to see changes
-- [ ] Verify build/ files were updated
+### Verify Package Publish
+- [ ] npm: `npm view @scope/design-tokens version` (or GH Packages with registry flag)
+- [ ] Install test: `npm install @scope/design-tokens` and check outputs resolve
+- [ ] Flutter: confirm artifact/release contains `tokens.dart` (if configured)
 
 ### Test Automation (Push Trigger)
 - [ ] Make a small change to any token file (or simulate)
@@ -716,24 +724,23 @@ jobs:
 - [ ] Go to GitHub Actions tab
 - [ ] Verify workflow triggered automatically
 - [ ] Wait for completion
-- [ ] Verify auto-commit appears
+- [ ] Verify package version increments and contains change
 
 ### Verify No Infinite Loop
-- [ ] Check that workflow doesn't trigger on auto-commit
-- [ ] Verify `paths: - 'tokens/**'` filter is working
-- [ ] Confirm only ONE auto-commit per token change
-- [ ] If infinite loop occurs: Check paths filter
+- [ ] Paths filter `tokens/**` prevents self-trigger
+- [ ] No repeated publishes for a single push
 
 ### Phase 5 Verification Checklist
 - [x] Workflow file exists in `.github/workflows/`
 - [x] Workflow uses Node.js 22
 - [x] Workflow uses pnpm
-- [ ] "Read and write permissions" enabled
+- [ ] "Read and write" + "packages: write" permissions enabled
+- [ ] Secrets set (NPM_TOKEN or GITHUB_TOKEN)
 - [ ] Manual trigger works
-- [ ] Push to tokens/** triggers build
-- [ ] Auto-commit completes successfully
-- [ ] Build artifacts updated in auto-commit
-- [ ] No infinite loop (workflow doesn't retrigger)
+- [ ] Push to tokens/** triggers publish
+- [ ] Package installable (`npm install @scope/design-tokens`)
+- [ ] Optional Flutter artifact available
+- [ ] No infinite loop (paths filter prevents re-run)
 - [ ] Workflow badge green in Actions tab
 
 ---
