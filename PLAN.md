@@ -605,9 +605,9 @@ async function build() {
 - [ ] Push current code: `git push -u origin main` (if not already)
 
 ### Prepare Publishing Credentials
-- [ ] Add `NPM_TOKEN` secret (for npm public) **or** plan to use `GITHUB_TOKEN` for GitHub Packages
+- [ ] Add `NPM_TOKEN` secret (publish to npmjs)
 - [ ] Confirm package.json `name`/`version`/`exports` are correct
-- [ ] (Optional) Add `.npmrc` for GitHub Packages (`@scope:registry=https://npm.pkg.github.com`)
+- [ ] (Optional) Add `.npmrc` if using a scoped private registry elsewhere
 
 ### Create GitHub Actions Workflow
 - [x] Create `.github/workflows/build-tokens.yml`
@@ -669,16 +669,15 @@ jobs:
       - name: Build design tokens
         run: pnpm build
 ```
-- [ ] Add publish step (choose one):
+- [x] Add publish step (npmjs):
 ```yaml
-      # npm public
       - name: Publish package (npm)
         if: github.ref == 'refs/heads/main'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: pnpm publish --access public
 
-      # or GitHub Packages
+      # or GitHub Packages (optional)
       # - name: Publish package (GHP)
       #   if: github.ref == 'refs/heads/main'
       #   env:
@@ -686,7 +685,7 @@ jobs:
       #   run: pnpm publish --registry https://npm.pkg.github.com
 ```
 - [ ] (Optional) Upload Flutter artifact (`build/flutter/tokens.dart`) via `actions/upload-artifact@v4`
-- [ ] Save file
+- [x] Save file
 
 ### Enable GitHub Workflow Permissions
 - [ ] Go to GitHub repository
@@ -713,7 +712,7 @@ jobs:
 - [ ] (If artifact uploaded) download and verify `tokens.dart`
 
 ### Verify Package Publish
-- [ ] npm: `npm view @scope/design-tokens version` (or GH Packages with registry flag)
+- [ ] npm: `npm view @scope/design-tokens version`
 - [ ] Install test: `npm install @scope/design-tokens` and check outputs resolve
 - [ ] Flutter: confirm artifact/release contains `tokens.dart` (if configured)
 
@@ -735,7 +734,7 @@ jobs:
 - [x] Workflow uses Node.js 22
 - [x] Workflow uses pnpm
 - [ ] "Read and write" + "packages: write" permissions enabled
-- [ ] Secrets set (NPM_TOKEN or GITHUB_TOKEN)
+- [ ] Secrets set (`NPM_TOKEN`)
 - [ ] Manual trigger works
 - [ ] Push to tokens/** triggers publish
 - [ ] Package installable (`npm install @scope/design-tokens`)

@@ -13,6 +13,7 @@ jobs:
 
     permissions:
       contents: write
+      packages: write
 
     steps:
       - name: Checkout repository
@@ -37,10 +38,15 @@ jobs:
       - name: Build design tokens
         run: pnpm build
 
-      - name: Commit build artifacts
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: '🤖 chore: rebuild design tokens'
-          file_pattern: 'build/**'
-          commit_user_name: 'github-actions[bot]'
-          commit_user_email: 'github-actions[bot]@users.noreply.github.com'
+      - name: Configure npm for npmjs
+        run: |
+          pnpm config set //registry.npmjs.org/:_authToken ${NODE_AUTH_TOKEN}
+          pnpm config set always-auth true
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish package (npmjs)
+        if: github.ref == 'refs/heads/main'
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: pnpm publish --access public

@@ -2691,7 +2691,7 @@ By the end of this phase, you will have:
 
 ```
 Token Studio Push → GitHub detects change → Action triggered →
-  → Install dependencies → Run build → Commit outputs → Push
+  → Install dependencies → Run build → Publish package
 ```
 
 #### Practice
@@ -2713,7 +2713,8 @@ jobs:
     runs-on: ubuntu-latest
     
     permissions:
-      contents: write  # Required for auto-commit
+      contents: write
+      packages: write
     
     steps:
       # 1. Checkout repository
@@ -2743,14 +2744,19 @@ jobs:
       - name: Build design tokens
         run: pnpm build
       
-      # 6. Commit and push build outputs
-      - name: Commit build artifacts
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: '🤖 chore: rebuild design tokens'
-          file_pattern: 'build/**'
-          commit_user_name: 'github-actions[bot]'
-          commit_user_email: 'github-actions[bot]@users.noreply.github.com'
+      # 6. Publish package to npmjs
+      - name: Configure npm auth
+        run: |
+          pnpm config set //registry.npmjs.org/:_authToken ${NODE_AUTH_TOKEN}
+          pnpm config set always-auth true
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish package (npmjs)
+        if: github.ref == 'refs/heads/main'
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: pnpm publish --access public
 
 ### Section 6.1b: Publish built tokens as a package (recommended)
 
@@ -2761,7 +2767,7 @@ Publishing avoids noisy auto-commit diffs and gives consumers a stable, versione
 - package.json versioning strategy (semver) and correct `name`/`exports` (already present).
 - Optional: keep `build/` out of git to reduce noise.
 
-**Workflow snippet (replace auto-commit step)**
+**Workflow snippet (already shown above; key parts repeated)**
 ```yaml
     permissions:
       contents: write
@@ -2777,7 +2783,7 @@ Publishing avoids noisy auto-commit diffs and gives consumers a stable, versione
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: pnpm publish --access public
 
-      # OR publish to GitHub Packages
+      # OR publish to GitHub Packages (optional)
       # - name: Publish package (GHP)
       #   if: github.ref == 'refs/heads/main'
       #   env:
@@ -2859,10 +2865,10 @@ git push origin main
 
 **Step 3**: Verify auto-commit
 
-1. Go to **Code** tab
-2. Check recent commits
-3. You should see "🤖 chore: rebuild design tokens" commit
-4. Check `build/css/variables.css` contains the new blue value
+1. Go to **Actions** tab and open the run
+2. Confirm publish step succeeded
+3. `npm view @your-scope/design-tokens version` shows new version
+4. (Optional) Install in a test project and check `build/css/variables.css` content
 
 #### Verification
 
@@ -2870,8 +2876,8 @@ git push origin main
 
 - [ ] Actions tab shows workflow run
 - [ ] Workflow completes with green checkmark
-- [ ] (Package path) New version visible in npm/GitHub Packages
-- [ ] Build files included in published package (css, scss, tokens.dart, tokens.ts)
+- [ ] New version visible in npmjs (`npm view … version`)
+- [ ] Package includes expected outputs (css, scss, tokens.dart, tokens.ts)
 
 > ❌ **If Workflow Fails:**
 > 
