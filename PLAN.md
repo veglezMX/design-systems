@@ -22,7 +22,7 @@ This plan covers the **Developer-Led workflow** for creating and transforming de
 - [x] Phase 1: Repository Foundation ✅
 - [x] Phase 2: Style Dictionary Configuration ✅
 - [x] Phase 3: Multi-Platform Outputs ✅
-- [ ] Phase 4: Theme Architecture
+- [x] Phase 4: Theme Architecture ✅
 - [ ] Phase 5: CI/CD Build Automation
 - [ ] Phase 6: Testing & Verification
 
@@ -417,15 +417,15 @@ export type Tokens = typeof tokens;
 **Prerequisites**: Phase 3 complete, theme JSON files exist
 
 ### Verify Theme Files Exist
-- [ ] Check for `tokens/themes/light.json`
-- [ ] Check for `tokens/themes/dark.json`
-- [ ] Verify theme files contain semantic overrides
-- [ ] Verify themes reference primitives (not hardcoded values)
-- [ ] If themes don't exist: Create them directly in your code editor following DTCG format
+- [x] Check for `tokens/themes/light.json`
+- [x] Check for `tokens/themes/dark.json`
+- [x] Verify theme files contain semantic overrides
+- [x] Verify themes reference primitives (not hardcoded values)
+- [x] If themes don't exist: Create them directly in your code editor following DTCG format
 
 ### Restructure Configuration for Themes
-- [ ] Open `src/style-dictionary.config.mjs`
-- [ ] Create `baseConfig` object with shared settings:
+- [x] Open `src/style-dictionary.config.mjs`
+- [x] Create `baseConfig` object with shared settings:
 ```javascript
 const baseConfig = {
   preprocessors: ['tokens-studio'],
@@ -434,10 +434,10 @@ const baseConfig = {
   },
 };
 ```
-- [ ] Save existing full config as `allPlatformsConfig`
+- [x] Save existing full config as `allPlatformsConfig`
 
 ### Create Light Theme Configuration
-- [ ] Define `lightConfig`:
+- [x] Define `lightConfig`:
 ```javascript
 const lightConfig = {
   ...baseConfig,
@@ -464,10 +464,10 @@ const lightConfig = {
   },
 };
 ```
-- [ ] Note the dual selector strategy (`:root` for default + `[data-theme="light"]`)
+- [x] Note the dual selector strategy (`:root` for default + `[data-theme="light"]`)
 
 ### Create Dark Theme Configuration
-- [ ] Define `darkConfig`:
+- [x] Define `darkConfig`:
 ```javascript
 const darkConfig = {
   ...baseConfig,
@@ -494,10 +494,10 @@ const darkConfig = {
   },
 };
 ```
-- [ ] Note the single selector for dark theme
+- [x] Note the single selector for dark theme
 
 ### Update Build Function for Multiple Configs
-- [ ] Modify `build()` function:
+- [x] Modify `build()` function:
 ```javascript
 async function build() {
   console.log('🎨 Building design tokens...\n');
@@ -523,38 +523,38 @@ async function build() {
   console.log('\n✅ Build complete!');
 }
 ```
-- [ ] Save file
+- [x] Save file
 
 ### Test Theme Builds
-- [ ] Run: `pnpm build`
-- [ ] Verify console shows three build steps:
+- [x] Run: `pnpm build`
+- [x] Verify console shows three build steps:
   - "Building base tokens..."
   - "Building light theme..."
   - "Building dark theme..."
-- [ ] Check files created:
+- [x] Check files created:
   - `build/css/variables.css` (base)
   - `build/css/variables-light.css`
   - `build/css/variables-dark.css`
-- [ ] Verify no errors
+- [x] Verify no errors
 
 ### Verify Light Theme Output
-- [ ] Open `build/css/variables-light.css`
-- [ ] Verify selector: `:root, [data-theme="light"] { ... }`
-- [ ] Verify background colors reference "light" values:
+- [x] Open `build/css/variables-light.css`
+- [x] Verify selector: `:root, [data-theme="light"] { ... }`
+- [x] Verify background colors reference "light" values:
   - Example: `--ds-color-background-default: var(--ds-color-primitive-white);`
-- [ ] Verify foreground uses dark gray
-- [ ] Check all expected tokens present
+- [x] Verify foreground uses dark gray
+- [x] Check all expected tokens present
 
 ### Verify Dark Theme Output
-- [ ] Open `build/css/variables-dark.css`
-- [ ] Verify selector: `[data-theme="dark"] { ... }`
-- [ ] Verify background colors reference "dark" values:
+- [x] Open `build/css/variables-dark.css`
+- [x] Verify selector: `[data-theme="dark"] { ... }`
+- [x] Verify background colors reference "dark" values:
   - Example: `--ds-color-background-default: var(--ds-color-primitive-gray-900);`
-- [ ] Verify foreground uses white/light colors
-- [ ] Compare with light theme - values should be inverted
+- [x] Verify foreground uses white/light colors
+- [x] Compare with light theme - values should be inverted
 
 ### Test Theme Switching Strategy
-- [ ] Create test HTML file (optional):
+- [x] Create test HTML file (optional):
 ```html
 <!DOCTYPE html>
 <html>
@@ -577,18 +577,18 @@ async function build() {
 </body>
 </html>
 ```
-- [ ] Open in browser and verify themes work
-- [ ] Test toggling data-theme attribute
+- [x] Open in browser and verify themes work
+- [x] Test toggling data-theme attribute
 
 ### Phase 4 Verification Checklist
-- [ ] Three separate configs defined (base, light, dark)
-- [ ] Build function builds all three sequentially
-- [ ] variables-light.css created with correct selector
-- [ ] variables-dark.css created with correct selector
-- [ ] Light/dark values properly inverted
-- [ ] Same token names used in both themes
-- [ ] Theme switching works in browser test
-- [ ] No build errors
+- [x] Three separate configs defined (base, light, dark)
+- [x] Build function builds all three sequentially
+- [x] variables-light.css created with correct selector
+- [x] variables-dark.css created with correct selector
+- [x] Light/dark values properly inverted
+- [x] Same token names used in both themes
+- [x] Theme switching works in browser test
+- [x] No build errors
 
 ---
 
