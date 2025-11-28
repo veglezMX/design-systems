@@ -1,0 +1,40 @@
+{
+  "spacing": {
+    "component": {
+      "padding": {
+        "small": {
+          "$value": "{spacing.primitive.sm}",
+          "$type": "dimension",
+          "$description": "Small component padding"
+        },
+        "medium": {
+          "$value": "{spacing.primitive.md}",
+          "$type": "dimension",
+          "$description": "Medium component padding"
+        },
+        "large": {
+          "$value": "{spacing.primitive.lg}",
+          "$type": "dimension",
+          "$description": "Large component padding"
+        }
+      },
+      "gap": {
+        "small": {
+          "$value": "{spacing.primitive.sm}",
+          "$type": "dimension",
+          "$description": "Small gap between elements"
+        },
+        "medium": {
+          "$value": "{spacing.primitive.md}",
+          "$type": "dimension",
+          "$description": "Medium gap between elements"
+        },
+        "large": {
+          "$value": "{spacing.primitive.lg}",
+          "$type": "dimension",
+          "$description": "Large gap between sections"
+        }
+      }
+    }
+  }
+}

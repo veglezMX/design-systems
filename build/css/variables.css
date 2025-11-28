@@ -1,0 +1,50 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --ds-color-primitive-white: #ffffff; /** Pure white */
+  --ds-color-primitive-black: #000000; /** Pure black */
+  --ds-color-primitive-blue-50: #e6f2ff;
+  --ds-color-primitive-blue-100: #cce5ff;
+  --ds-color-primitive-blue-500: #0066ff; /** Primary brand blue */
+  --ds-color-primitive-blue-700: #0047b3;
+  --ds-color-primitive-blue-900: #002966;
+  --ds-color-primitive-gray-50: #f8f9fa;
+  --ds-color-primitive-gray-100: #e9ecef;
+  --ds-color-primitive-gray-200: #dee2e6;
+  --ds-color-primitive-gray-500: #6c757d;
+  --ds-color-primitive-gray-700: #495057;
+  --ds-color-primitive-gray-900: #212529;
+  --ds-color-primitive-red-500: #dc3545; /** Error/danger color */
+  --ds-color-primitive-red-700: #a71d2a;
+  --ds-color-primitive-green-500: #28a745; /** Success color */
+  --ds-color-primitive-green-700: #1e7e34;
+  --ds-spacing-primitive-0: 0;
+  --ds-spacing-primitive-xs: 4px; /** Extra small spacing */
+  --ds-spacing-primitive-sm: 8px; /** Small spacing */
+  --ds-spacing-primitive-md: 16px; /** Medium spacing */
+  --ds-spacing-primitive-lg: 24px; /** Large spacing */
+  --ds-spacing-primitive-xl: 32px; /** Extra large spacing */
+  --ds-spacing-primitive-2xl: 48px;
+  --ds-color-action-primary: var(--ds-color-primitive-blue-500); /** Primary action color for buttons and links */
+  --ds-color-action-primary-hover: var(--ds-color-primitive-blue-700); /** Primary action hover state */
+  --ds-color-background-default: var(--ds-color-primitive-white); /** Default page background */
+  --ds-color-background-subtle: var(--ds-color-primitive-gray-50); /** Subtle background for cards and panels */
+  --ds-color-background-muted: var(--ds-color-primitive-gray-100); /** Muted background for disabled states */
+  --ds-color-foreground-default: var(--ds-color-primitive-gray-900); /** Default text color */
+  --ds-color-foreground-muted: var(--ds-color-primitive-gray-500); /** Muted text color for secondary content */
+  --ds-color-foreground-on-primary: var(--ds-color-primitive-white); /** Text color on primary backgrounds */
+  --ds-color-border-default: var(--ds-color-primitive-gray-200); /** Default border color */
+  --ds-color-border-strong: var(--ds-color-primitive-gray-500); /** Strong border for emphasis */
+  --ds-color-feedback-error: var(--ds-color-primitive-red-500); /** Error and danger states */
+  --ds-color-feedback-error-hover: var(--ds-color-primitive-red-700);
+  --ds-color-feedback-success: var(--ds-color-primitive-green-500); /** Success states */
+  --ds-color-feedback-success-hover: var(--ds-color-primitive-green-700);
+  --ds-spacing-component-padding-small: var(--ds-spacing-primitive-sm); /** Small component padding */
+  --ds-spacing-component-padding-medium: var(--ds-spacing-primitive-md); /** Medium component padding */
+  --ds-spacing-component-padding-large: var(--ds-spacing-primitive-lg); /** Large component padding */
+  --ds-spacing-component-gap-small: var(--ds-spacing-primitive-sm); /** Small gap between elements */
+  --ds-spacing-component-gap-medium: var(--ds-spacing-primitive-md); /** Medium gap between elements */
+  --ds-spacing-component-gap-large: var(--ds-spacing-primitive-lg); /** Large gap between sections */
+}

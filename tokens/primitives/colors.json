@@ -1,0 +1,87 @@
+{
+  "color": {
+    "primitive": {
+      "white": {
+        "$value": "#ffffff",
+        "$type": "color",
+        "$description": "Pure white"
+      },
+      "black": {
+        "$value": "#000000",
+        "$type": "color",
+        "$description": "Pure black"
+      },
+      "blue": {
+        "50": {
+          "$value": "#e6f2ff",
+          "$type": "color"
+        },
+        "100": {
+          "$value": "#cce5ff",
+          "$type": "color"
+        },
+        "500": {
+          "$value": "#0066ff",
+          "$type": "color",
+          "$description": "Primary brand blue"
+        },
+        "700": {
+          "$value": "#0047b3",
+          "$type": "color"
+        },
+        "900": {
+          "$value": "#002966",
+          "$type": "color"
+        }
+      },
+      "gray": {
+        "50": {
+          "$value": "#f8f9fa",
+          "$type": "color"
+        },
+        "100": {
+          "$value": "#e9ecef",
+          "$type": "color"
+        },
+        "200": {
+          "$value": "#dee2e6",
+          "$type": "color"
+        },
+        "500": {
+          "$value": "#6c757d",
+          "$type": "color"
+        },
+        "700": {
+          "$value": "#495057",
+          "$type": "color"
+        },
+        "900": {
+          "$value": "#212529",
+          "$type": "color"
+        }
+      },
+      "red": {
+        "500": {
+          "$value": "#dc3545",
+          "$type": "color",
+          "$description": "Error/danger color"
+        },
+        "700": {
+          "$value": "#a71d2a",
+          "$type": "color"
+        }
+      },
+      "green": {
+        "500": {
+          "$value": "#28a745",
+          "$type": "color",
+          "$description": "Success color"
+        },
+        "700": {
+          "$value": "#1e7e34",
+          "$type": "color"
+        }
+      }
+    }
+  }
+}

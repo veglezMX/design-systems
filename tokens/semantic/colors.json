@@ -1,0 +1,82 @@
+{
+  "color": {
+    "action": {
+      "primary": {
+        "$value": "{color.primitive.blue.500}",
+        "$type": "color",
+        "$description": "Primary action color for buttons and links"
+      },
+      "primary-hover": {
+        "$value": "{color.primitive.blue.700}",
+        "$type": "color",
+        "$description": "Primary action hover state"
+      }
+    },
+    "background": {
+      "default": {
+        "$value": "{color.primitive.white}",
+        "$type": "color",
+        "$description": "Default page background"
+      },
+      "subtle": {
+        "$value": "{color.primitive.gray.50}",
+        "$type": "color",
+        "$description": "Subtle background for cards and panels"
+      },
+      "muted": {
+        "$value": "{color.primitive.gray.100}",
+        "$type": "color",
+        "$description": "Muted background for disabled states"
+      }
+    },
+    "foreground": {
+      "default": {
+        "$value": "{color.primitive.gray.900}",
+        "$type": "color",
+        "$description": "Default text color"
+      },
+      "muted": {
+        "$value": "{color.primitive.gray.500}",
+        "$type": "color",
+        "$description": "Muted text color for secondary content"
+      },
+      "on-primary": {
+        "$value": "{color.primitive.white}",
+        "$type": "color",
+        "$description": "Text color on primary backgrounds"
+      }
+    },
+    "border": {
+      "default": {
+        "$value": "{color.primitive.gray.200}",
+        "$type": "color",
+        "$description": "Default border color"
+      },
+      "strong": {
+        "$value": "{color.primitive.gray.500}",
+        "$type": "color",
+        "$description": "Strong border for emphasis"
+      }
+    },
+    "feedback": {
+      "error": {
+        "$value": "{color.primitive.red.500}",
+        "$type": "color",
+        "$description": "Error and danger states"
+      },
+      "error-hover": {
+        "$value": "{color.primitive.red.700}",
+        "$type": "color"
+      },
+      "success": {
+        "$value": "{color.primitive.green.500}",
+        "$type": "color",
+        "$description": "Success states"
+      },
+      "success-hover": {
+        "$value": "{color.primitive.green.700}",
+        "$type": "color"
+      }
+    }
+  }
+}
