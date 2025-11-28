@@ -334,7 +334,7 @@ graph TB
     style G fill:#9ff,stroke:#333
 ```
 
-### ✅ Concept Checkpoint
+### Concept Checkpoint
 
 Before proceeding, verify you understand:
 
@@ -573,13 +573,13 @@ Everything else (Figma, build outputs, documentation) is derived from these JSON
 5. Apps consume the generated files
 
 **Pros:**
-- ✅ Direct control over tokens
-- ✅ Faster workflow (no Figma roundtrip)
-- ✅ No external dependencies or subscriptions
-- ✅ Standard development workflow (edit → build → commit)
-- ✅ Full Git history and diffs
-- ✅ Can use any text editor/IDE
-- ✅ **Works perfectly without Figma/Tokens Studio**
+- Direct control over tokens
+- Faster workflow (no Figma roundtrip)
+- No external dependencies or subscriptions
+- Standard development workflow (edit → build → commit)
+- Full Git history and diffs
+- Can use any text editor/IDE
+- **Works perfectly without Figma/Tokens Studio**
 
 **Cons:**
 - Requires understanding of JSON/DTCG format
@@ -792,7 +792,7 @@ design-tokens/
 │   └── workflows/
 │       └── build-tokens.yml        # CI/CD automation
 │
-├── tokens/                          # 📥 SOURCE OF TRUTH
+├── tokens/                          # SOURCE OF TRUTH
 │   ├── primitives/                  # Tier 1: Raw values
 │   │   ├── colors.json
 │   │   ├── spacing.json
@@ -806,7 +806,7 @@ design-tokens/
 │       ├── light.json
 │       └── dark.json
 │
-├── build/                           # 📤 GENERATED OUTPUT
+├── build/                           # GENERATED OUTPUT
 │   ├── css/
 │   │   ├── variables.css
 │   │   ├── variables-light.css
@@ -985,7 +985,7 @@ Open `package.json` and update it:
 
 #### Verification
 
-✅ **How to Verify This Worked:**
+**How to Verify This Worked:**
 
 ```bash
 # Check folder structure
@@ -1112,7 +1112,7 @@ Before moving to Phase 2, verify:
 > - Missing `"type": "module"` in package.json
 > - Running commands in wrong directory
 
-**Phase 1 Complete! ✅**
+**Phase 1 Complete!**
 
 ---
 
@@ -1251,7 +1251,7 @@ Tokens Studio needs permission to push commits. A Personal Access Token (PAT) ac
 
 #### Verification
 
-✅ **How to Verify Connection Works:**
+**How to Verify Connection Works:**
 
 - [ ] Settings show GitHub with green "Connected" status
 - [ ] No authentication errors
@@ -1417,7 +1417,7 @@ In Tokens Studio, you should see:
 
 #### Verification
 
-✅ **How to Verify This Worked:**
+**How to Verify This Worked:**
 
 **In Figma (Tokens Studio):**
 - Shows "Push successful" message
@@ -1473,7 +1473,7 @@ tokens/
 | Using aliases | Check semantic values | `{references}` not hex |
 | Pushed to GitHub | Check GitHub repo | JSON files in tokens/ |
 
-**Phase 2 Complete! ✅**
+**Phase 2 Complete!**
 
 ---
 
@@ -1752,7 +1752,7 @@ With `outputReferences: true`, semantic tokens reference primitives:
 | CSS output | `cat build/css/variables.css` | Variables with `--ds-` prefix |
 | References preserved | Check CSS | `var(--ds-...)` syntax |
 
-**Phase 3 Complete! ✅**
+**Phase 3 Complete!**
 
 ---
 
@@ -2274,7 +2274,7 @@ build().catch(console.error);
 | Dart syntax valid | Check tokens.dart | Proper Color() syntax |
 | TypeScript exports | Check tokens.ts | `export const tokens` |
 
-**Phase 4 Complete! ✅**
+**Phase 4 Complete!**
 
 ---
 
@@ -2662,7 +2662,7 @@ function toggleTheme() {
 | Different selectors | Check CSS files | `:root` vs `[data-theme="dark"]` |
 | Values differ | Compare files | background swapped |
 
-**Phase 5 Complete! ✅**
+**Phase 5 Complete!**
 
 ---
 
@@ -2900,7 +2900,7 @@ git push origin main
 | Auto-commit works | Commit history | Bot commit appears |
 | Files updated | Check build/ | New values present |
 
-**Phase 6 Complete! ✅**
+**Phase 6 Complete!**
 
 ---
 
@@ -3345,7 +3345,7 @@ git pull origin main
 
 ---
 
-## ✅ Completion Checklist
+## Completion Checklist
 
 ### Foundation (Phases 1-2)
 - [ ] Node.js 22+ installed
@@ -3382,11 +3382,11 @@ git pull origin main
 
 Congratulations! You've built a **production-grade, multi-platform design token pipeline** that:
 
-✅ **Uses W3C standards** - DTCG format ensures future compatibility  
-✅ **Scales to any size** - Three-tier architecture handles growth  
-✅ **Supports all platforms** - CSS, SCSS, Flutter, Vanilla Extract from one source  
-✅ **Enables theming** - Light/dark/brand variants without code changes  
-✅ **Automates everything** - Figma push → production outputs in 2 minutes  
+**Uses W3C standards** - DTCG format ensures future compatibility  
+**Scales to any size** - Three-tier architecture handles growth  
+**Supports all platforms** - CSS, SCSS, Flutter, Vanilla Extract from one source  
+**Enables theming** - Light/dark/brand variants without code changes  
+**Automates everything** - Figma push → production outputs in 2 minutes  
 
 ### The New Workflow
 
@@ -3417,4 +3417,4 @@ Everyone: Ships consistent products
 
 ---
 
-*You now have the tools and knowledge to maintain design consistency at scale across web and mobile. The setup investment pays dividends on every future design change.* 🚀
+*You now have the tools and knowledge to maintain design consistency at scale across web and mobile. The setup investment pays dividends on every future design change.*
