@@ -23,7 +23,7 @@ export const tokens = {
     },
     "focus-ring": {
       "width": "2px",
-      "color": "#2196f3"
+      "color": "#2186f3"
     },
     "divider": {
       "width": "1px",
@@ -50,7 +50,7 @@ export const tokens = {
         "200": "#90caf9",
         "300": "#64b5f6",
         "400": "#42a5f5",
-        "500": "#2196f3",
+        "500": "#2186f3",
         "600": "#1e88e5",
         "700": "#1976d2",
         "800": "#1565c0",
@@ -175,7 +175,7 @@ export const tokens = {
       "variant": "#46474a"
     },
     "primary": {
-      "default": "#2196f3",
+      "default": "#2186f3",
       "container": "#bbdefb",
       "on-primary": "#ffffff",
       "on-container": "#0d47a1",

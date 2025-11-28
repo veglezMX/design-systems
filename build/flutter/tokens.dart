@@ -9,7 +9,7 @@ abstract class DSTokens {
   static const Color borderDefaultColor = Color(0xFF77767A);
   static const Color borderStrongColor = Color(0xFFC7C5C8);
   static const Color borderSubtleColor = Color(0xFFECE6F0);
-  static const Color borderFocusRingColor = Color(0xFF2196F3);
+  static const Color borderFocusRingColor = Color(0xFF2186F3);
   static const Color borderDividerColor = Color(0xFF77767A);
   static const Color colorPrimitiveWhite = Color(0xFFFFFFFF);
   static const Color colorPrimitiveBlack = Color(0xFF000000);
@@ -18,7 +18,7 @@ abstract class DSTokens {
   static const Color colorPrimitivePrimary200 = Color(0xFF90CAF9);
   static const Color colorPrimitivePrimary300 = Color(0xFF64B5F6);
   static const Color colorPrimitivePrimary400 = Color(0xFF42A5F5);
-  static const Color colorPrimitivePrimary500 = Color(0xFF2196F3);
+  static const Color colorPrimitivePrimary500 = Color(0xFF2186F3);
   static const Color colorPrimitivePrimary600 = Color(0xFF1E88E5);
   static const Color colorPrimitivePrimary700 = Color(0xFF1976D2);
   static const Color colorPrimitivePrimary800 = Color(0xFF1565C0);
@@ -120,7 +120,7 @@ abstract class DSTokens {
   static const Color colorSurfaceContainerHighest = Color(0xFFC1BDC4);
   static const Color colorOnSurfaceDefault = Color(0xFF1C1B1F);
   static const Color colorOnSurfaceVariant = Color(0xFF46474A);
-  static const Color colorPrimaryDefault = Color(0xFF2196F3);
+  static const Color colorPrimaryDefault = Color(0xFF2186F3);
   static const Color colorPrimaryContainer = Color(0xFFBBDEFB);
   static const Color colorPrimaryOnPrimary = Color(0xFFFFFFFF);
   static const Color colorPrimaryOnContainer = Color(0xFF0D47A1);
