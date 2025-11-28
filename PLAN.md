@@ -677,19 +677,19 @@ jobs:
 - [x] Save file
 
 ### Enable GitHub Workflow Permissions
-- [ ] Go to GitHub repository
-- [ ] Navigate to Settings → Actions → General
-- [ ] Scroll to "Workflow permissions"
-- [ ] Select "Read and write permissions"
-- [ ] Enable "Allow GitHub Actions to create and approve pull requests"
-- [ ] Click Save
+- [x] Go to GitHub repository
+- [x] Navigate to Settings → Actions → General
+- [x] Scroll to "Workflow permissions"
+- [x] Select "Read and write permissions"
+- [x] Enable "Allow GitHub Actions to create and approve pull requests"
+- [x] Click Save
 
 ### Commit and Push Workflow
-- [ ] Stage workflow: `git add .github/workflows/build-tokens.yml`
-- [ ] Commit: `git commit -m "ci: add GitHub Actions build workflow"`
-- [ ] Push: `git push origin main`
-- [ ] Go to GitHub Actions tab
-- [ ] Verify workflow file appears in list
+- [x] Stage workflow: `git add .github/workflows/build-tokens.yml`
+- [x] Commit: `git commit -m "ci: add GitHub Actions build workflow"`
+- [x] Push: `git push origin main`
+- [x] Go to GitHub Actions tab
+- [x] Verify workflow file appears in list
 
 ### Test Automation (Manual Trigger)
 - [ ] In GitHub Actions tab, click on workflow
