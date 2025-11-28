@@ -1,0 +1,582 @@
+
+// Do not edit directly, this file was auto-generated.
+
+$ds-border-width-none: 0; // No border
+$ds-border-width-thin: 1px; // Thin border - standard
+$ds-border-width-medium: 2px; // Medium border
+$ds-border-width-thick: 4px; // Thick border
+$ds-border-width-heavy: 8px; // Heavy border
+$ds-breakpoint-primitive-xs: 0px; // Extra small - mobile portrait
+$ds-breakpoint-primitive-sm: 600px; // Small - mobile landscape, Material Design 3 compact
+$ds-breakpoint-primitive-md: 905px; // Medium - tablet, Material Design 3 medium
+$ds-breakpoint-primitive-lg: 1240px; // Large - desktop, Material Design 3 expanded
+$ds-breakpoint-primitive-xl: 1440px; // Extra large - wide desktop, Material Design 3 large
+$ds-breakpoint-primitive-2xl: 1920px; // 2x extra large - ultra-wide, Material Design 3 extra-large
+$ds-color-primitive-white: #ffffff; // Pure white
+$ds-color-primitive-black: #000000; // Pure black
+$ds-color-primitive-primary-50: #e3f2fd; // Primary tonal palette - lightest
+$ds-color-primitive-primary-100: #bbdefb;
+$ds-color-primitive-primary-200: #90caf9;
+$ds-color-primitive-primary-300: #64b5f6;
+$ds-color-primitive-primary-400: #42a5f5;
+$ds-color-primitive-primary-500: #2196f3; // Primary brand color - Material Design 3 baseline
+$ds-color-primitive-primary-600: #1e88e5;
+$ds-color-primitive-primary-700: #1976d2;
+$ds-color-primitive-primary-800: #1565c0;
+$ds-color-primitive-primary-900: #0d47a1; // Primary tonal palette - darkest
+$ds-color-primitive-secondary-50: #fce4ec; // Secondary tonal palette - lightest
+$ds-color-primitive-secondary-100: #f8bbd0;
+$ds-color-primitive-secondary-200: #f48fb1;
+$ds-color-primitive-secondary-300: #f06292;
+$ds-color-primitive-secondary-400: #ec407a;
+$ds-color-primitive-secondary-500: #e91e63; // Secondary brand color
+$ds-color-primitive-secondary-600: #d81b60;
+$ds-color-primitive-secondary-700: #c2185b;
+$ds-color-primitive-secondary-800: #ad1457;
+$ds-color-primitive-secondary-900: #880e4f; // Secondary tonal palette - darkest
+$ds-color-primitive-tertiary-50: #e0f2f1; // Tertiary tonal palette - lightest
+$ds-color-primitive-tertiary-100: #b2dfdb;
+$ds-color-primitive-tertiary-200: #80cbc4;
+$ds-color-primitive-tertiary-300: #4db6ac;
+$ds-color-primitive-tertiary-400: #26a69a;
+$ds-color-primitive-tertiary-500: #009688; // Tertiary accent color
+$ds-color-primitive-tertiary-600: #00897b;
+$ds-color-primitive-tertiary-700: #00796b;
+$ds-color-primitive-tertiary-800: #00695c;
+$ds-color-primitive-tertiary-900: #004d40; // Tertiary tonal palette - darkest
+$ds-color-primitive-neutral-0: #000000; // Neutral variant - black
+$ds-color-primitive-neutral-10: #1c1b1f;
+$ds-color-primitive-neutral-20: #313033;
+$ds-color-primitive-neutral-30: #484649;
+$ds-color-primitive-neutral-40: #605d62;
+$ds-color-primitive-neutral-50: #f5f5f5;
+$ds-color-primitive-neutral-60: #8b888f;
+$ds-color-primitive-neutral-70: #a6a2a9;
+$ds-color-primitive-neutral-80: #c1bdc4;
+$ds-color-primitive-neutral-90: #ddd8e0;
+$ds-color-primitive-neutral-95: #ece6f0;
+$ds-color-primitive-neutral-99: #fcfcfc;
+$ds-color-primitive-neutral-100: #ffffff; // Neutral variant - white
+$ds-color-primitive-neutral-variant-0: #000000;
+$ds-color-primitive-neutral-variant-10: #1a1c1e;
+$ds-color-primitive-neutral-variant-20: #2f3033;
+$ds-color-primitive-neutral-variant-30: #46474a;
+$ds-color-primitive-neutral-variant-40: #5e5e62;
+$ds-color-primitive-neutral-variant-50: #77767a;
+$ds-color-primitive-neutral-variant-60: #918f93;
+$ds-color-primitive-neutral-variant-70: #aba9ad;
+$ds-color-primitive-neutral-variant-80: #c7c5c8;
+$ds-color-primitive-neutral-variant-90: #e3e1e4;
+$ds-color-primitive-neutral-variant-95: #f1eff2;
+$ds-color-primitive-neutral-variant-99: #fcfcfc;
+$ds-color-primitive-neutral-variant-100: #ffffff;
+$ds-color-primitive-error-50: #ffebee;
+$ds-color-primitive-error-100: #ffcdd2;
+$ds-color-primitive-error-200: #ef9a9a;
+$ds-color-primitive-error-300: #e57373;
+$ds-color-primitive-error-400: #ef5350;
+$ds-color-primitive-error-500: #f44336; // Error/danger color - Material Design 3
+$ds-color-primitive-error-600: #e53935;
+$ds-color-primitive-error-700: #d32f2f;
+$ds-color-primitive-error-800: #c62828;
+$ds-color-primitive-error-900: #b71c1c;
+$ds-color-primitive-warning-50: #fff3e0;
+$ds-color-primitive-warning-100: #ffe0b2;
+$ds-color-primitive-warning-200: #ffcc80;
+$ds-color-primitive-warning-300: #ffb74d;
+$ds-color-primitive-warning-400: #ffa726;
+$ds-color-primitive-warning-500: #ff9800; // Warning color
+$ds-color-primitive-warning-600: #fb8c00;
+$ds-color-primitive-warning-700: #f57c00;
+$ds-color-primitive-warning-800: #ef6c00;
+$ds-color-primitive-warning-900: #e65100;
+$ds-color-primitive-success-50: #e8f5e9;
+$ds-color-primitive-success-100: #c8e6c9;
+$ds-color-primitive-success-200: #a5d6a7;
+$ds-color-primitive-success-300: #81c784;
+$ds-color-primitive-success-400: #66bb6a;
+$ds-color-primitive-success-500: #4caf50; // Success color
+$ds-color-primitive-success-600: #43a047;
+$ds-color-primitive-success-700: #388e3c;
+$ds-color-primitive-success-800: #2e7d32;
+$ds-color-primitive-success-900: #1b5e20;
+$ds-color-primitive-info-50: #e1f5fe;
+$ds-color-primitive-info-100: #b3e5fc;
+$ds-color-primitive-info-200: #81d4fa;
+$ds-color-primitive-info-300: #4fc3f7;
+$ds-color-primitive-info-400: #29b6f6;
+$ds-color-primitive-info-500: #03a9f4; // Info color
+$ds-color-primitive-info-600: #039be5;
+$ds-color-primitive-info-700: #0288d1;
+$ds-color-primitive-info-800: #0277bd;
+$ds-color-primitive-info-900: #01579b;
+$ds-icon-size-xs: 12px; // Extra small icon - inline text
+$ds-icon-size-sm: 16px; // Small icon - buttons
+$ds-icon-size-md: 20px; // Medium icon - Material Design 3 default
+$ds-icon-size-lg: 24px; // Large icon - app bars, cards
+$ds-icon-size-xl: 32px; // Extra large icon - feature highlights
+$ds-icon-size-2xl: 48px; // 2x extra large icon - avatars
+$ds-icon-size-3xl: 64px; // 3x extra large icon - hero sections
+$ds-motion-duration-instant: 0ms; // Instant - no animation
+$ds-motion-duration-short-1: 50ms; // Material Design 3 short-1 duration
+$ds-motion-duration-short-2: 100ms; // Material Design 3 short-2 duration
+$ds-motion-duration-short-3: 150ms; // Material Design 3 short-3 duration
+$ds-motion-duration-short-4: 200ms; // Material Design 3 short-4 duration
+$ds-motion-duration-medium-1: 250ms; // Material Design 3 medium-1 duration
+$ds-motion-duration-medium-2: 300ms; // Material Design 3 medium-2 duration
+$ds-motion-duration-medium-3: 350ms; // Material Design 3 medium-3 duration
+$ds-motion-duration-medium-4: 400ms; // Material Design 3 medium-4 duration
+$ds-motion-duration-long-1: 450ms; // Material Design 3 long-1 duration
+$ds-motion-duration-long-2: 500ms; // Material Design 3 long-2 duration
+$ds-motion-duration-long-3: 550ms; // Material Design 3 long-3 duration
+$ds-motion-duration-long-4: 600ms; // Material Design 3 long-4 duration
+$ds-motion-duration-extra-long-1: 700ms; // Material Design 3 extra-long-1 duration
+$ds-motion-duration-extra-long-2: 800ms; // Material Design 3 extra-long-2 duration
+$ds-motion-duration-extra-long-3: 900ms; // Material Design 3 extra-long-3 duration
+$ds-motion-duration-extra-long-4: 1000ms; // Material Design 3 extra-long-4 duration
+$ds-motion-easing-linear: cubic-bezier(0, 0, 1, 1); // Linear easing
+$ds-motion-easing-standard: cubic-bezier(0.2, 0, 0, 1); // Material Design 3 standard easing
+$ds-motion-easing-standard-accelerate: cubic-bezier(0.3, 0, 1, 1); // Material Design 3 standard accelerate
+$ds-motion-easing-standard-decelerate: cubic-bezier(0, 0, 0, 1); // Material Design 3 standard decelerate
+$ds-motion-easing-emphasized: cubic-bezier(0.2, 0, 0, 1); // Material Design 3 emphasized easing
+$ds-motion-easing-emphasized-accelerate: cubic-bezier(0.3, 0, 0.8, 0.15); // Material Design 3 emphasized accelerate
+$ds-motion-easing-emphasized-decelerate: cubic-bezier(0.05, 0.7, 0.1, 1); // Material Design 3 emphasized decelerate
+$ds-opacity-primitive-0: 0; // Fully transparent
+$ds-opacity-primitive-4: 0.04; // Material Design 3 state layer - 4%
+$ds-opacity-primitive-8: 0.08; // Material Design 3 state layer - 8%
+$ds-opacity-primitive-12: 0.12; // Material Design 3 state layer - 12%
+$ds-opacity-primitive-16: 0.16; // Material Design 3 state layer - 16%
+$ds-opacity-primitive-38: 0.38; // Material Design 3 disabled state - 38%
+$ds-opacity-primitive-50: 0.5; // Half transparent
+$ds-opacity-primitive-60: 0.6;
+$ds-opacity-primitive-70: 0.7;
+$ds-opacity-primitive-80: 0.8;
+$ds-opacity-primitive-87: 0.87; // Material Design 3 high emphasis - 87%
+$ds-opacity-primitive-100: 1; // Fully opaque
+$ds-radius-primitive-none: 0; // No border radius - sharp corners
+$ds-radius-primitive-xs: 2px; // Extra small radius
+$ds-radius-primitive-sm: 4px; // Small radius - Material Design 3 extra-small shape
+$ds-radius-primitive-md: 8px; // Medium radius - Material Design 3 small shape
+$ds-radius-primitive-lg: 12px; // Large radius - Material Design 3 medium shape
+$ds-radius-primitive-xl: 16px; // Extra large radius - Material Design 3 large shape
+$ds-radius-primitive-2xl: 24px; // 2x extra large radius - Material Design 3 extra-large shape
+$ds-radius-primitive-3xl: 28px; // 3x extra large radius
+$ds-radius-primitive-full: 9999px; // Full radius - pill/circle shape
+$ds-shadow-primitive-none: none; // No shadow - Material Design 3 elevation 0
+$ds-spacing-primitive-0: 0; // Zero spacing
+$ds-spacing-primitive-1: 2px; // Material Design 4dp grid - 0.5x
+$ds-spacing-primitive-2: 4px; // Material Design 4dp grid - 1x base
+$ds-spacing-primitive-4: 8px; // Material Design 4dp grid - 2x
+$ds-spacing-primitive-6: 12px; // Material Design 4dp grid - 3x
+$ds-spacing-primitive-8: 16px; // Material Design 4dp grid - 4x
+$ds-spacing-primitive-10: 20px; // Material Design 4dp grid - 5x
+$ds-spacing-primitive-12: 24px; // Material Design 4dp grid - 6x
+$ds-spacing-primitive-14: 28px; // Material Design 4dp grid - 7x
+$ds-spacing-primitive-16: 32px; // Material Design 4dp grid - 8x
+$ds-spacing-primitive-20: 40px; // Material Design 4dp grid - 10x
+$ds-spacing-primitive-24: 48px; // Material Design 4dp grid - 12x
+$ds-spacing-primitive-28: 56px; // Material Design 4dp grid - 14x
+$ds-spacing-primitive-32: 64px; // Material Design 4dp grid - 16x
+$ds-spacing-primitive-40: 80px; // Material Design 4dp grid - 20x
+$ds-spacing-primitive-48: 96px; // Material Design 4dp grid - 24x
+$ds-spacing-primitive-64: 128px; // Material Design 4dp grid - 32x
+$ds-spacing-primitive-80: 160px; // Material Design 4dp grid - 40x
+$ds-spacing-primitive-96: 192px; // Material Design 4dp grid - 48x
+$ds-spacing-primitive-128: 256px; // Material Design 4dp grid - 64x
+$ds-font-family-sans: 'Roboto', system-ui, -apple-system, 'Segoe UI', sans-serif; // Material Design 3 sans-serif stack
+$ds-font-family-serif: 'Roboto Serif', Georgia, 'Times New Roman', serif; // Serif font stack
+$ds-font-family-mono: 'Roboto Mono', 'Courier New', monospace; // Monospace font stack for code
+$ds-font-size-10: 10px;
+$ds-font-size-11: 11px; // Material Design 3 type scale
+$ds-font-size-12: 12px;
+$ds-font-size-14: 14px;
+$ds-font-size-16: 16px; // Base font size
+$ds-font-size-18: 18px;
+$ds-font-size-20: 20px;
+$ds-font-size-22: 22px;
+$ds-font-size-24: 24px;
+$ds-font-size-28: 28px;
+$ds-font-size-32: 32px;
+$ds-font-size-36: 36px;
+$ds-font-size-45: 45px;
+$ds-font-size-57: 57px; // Material Design 3 display sizes
+$ds-font-size-64: 64px;
+$ds-font-weight-light: 300;
+$ds-font-weight-regular: 400; // Normal font weight
+$ds-font-weight-medium: 500; // Material Design 3 medium weight
+$ds-font-weight-semibold: 600;
+$ds-font-weight-bold: 700;
+$ds-font-weight-extrabold: 800;
+$ds-font-weight-black: 900;
+$ds-font-line-height-none: 1;
+$ds-font-line-height-tight: 1.25; // For headlines
+$ds-font-line-height-snug: 1.375;
+$ds-font-line-height-normal: 1.5; // Base line height
+$ds-font-line-height-relaxed: 1.625; // For body text
+$ds-font-line-height-loose: 2;
+$ds-font-letter-spacing-tighter: -0.05em;
+$ds-font-letter-spacing-tight: -0.025em;
+$ds-font-letter-spacing-normal: 0; // Default letter spacing
+$ds-font-letter-spacing-wide: 0.025em;
+$ds-font-letter-spacing-wider: 0.05em; // Material Design 3 all-caps spacing
+$ds-font-letter-spacing-widest: 0.1em;
+$ds-z-index-primitive-0: 0; // Base layer
+$ds-z-index-primitive-1: 1; // Above base
+$ds-z-index-primitive-10: 10; // Dropdowns, popovers
+$ds-z-index-primitive-100: 100; // Sticky elements
+$ds-z-index-primitive-200: 200; // Fixed elements
+$ds-z-index-primitive-300: 300; // Modal backdrops
+$ds-z-index-primitive-400: 400; // Modals, dialogs
+$ds-z-index-primitive-500: 500; // Tooltips
+$ds-z-index-primitive-9999: 9999; // Top-most layer - toasts, notifications
+$ds-shadow-primitive-level-1-1-color: rgba(0, 0, 0, 0.2); // Material Design 3 elevation 1 (1dp)
+$ds-shadow-primitive-level-1-1-offset-x: 0; // Material Design 3 elevation 1 (1dp)
+$ds-shadow-primitive-level-1-1-offset-y: 1px; // Material Design 3 elevation 1 (1dp)
+$ds-shadow-primitive-level-1-1-blur: 2px; // Material Design 3 elevation 1 (1dp)
+$ds-shadow-primitive-level-1-1-spread: 0; // Material Design 3 elevation 1 (1dp)
+$ds-shadow-primitive-level-1-2-color: rgba(0, 0, 0, 0.12); // Material Design 3 elevation 1 (1dp)
+$ds-shadow-primitive-level-1-2-offset-x: 0; // Material Design 3 elevation 1 (1dp)
+$ds-shadow-primitive-level-1-2-offset-y: 1px; // Material Design 3 elevation 1 (1dp)
+$ds-shadow-primitive-level-1-2-blur: 3px; // Material Design 3 elevation 1 (1dp)
+$ds-shadow-primitive-level-1-2-spread: 0; // Material Design 3 elevation 1 (1dp)
+$ds-shadow-primitive-level-2-1-color: rgba(0, 0, 0, 0.2); // Material Design 3 elevation 2 (2dp)
+$ds-shadow-primitive-level-2-1-offset-x: 0; // Material Design 3 elevation 2 (2dp)
+$ds-shadow-primitive-level-2-1-offset-y: 2px; // Material Design 3 elevation 2 (2dp)
+$ds-shadow-primitive-level-2-1-blur: 4px; // Material Design 3 elevation 2 (2dp)
+$ds-shadow-primitive-level-2-1-spread: 0; // Material Design 3 elevation 2 (2dp)
+$ds-shadow-primitive-level-2-2-color: rgba(0, 0, 0, 0.12); // Material Design 3 elevation 2 (2dp)
+$ds-shadow-primitive-level-2-2-offset-x: 0; // Material Design 3 elevation 2 (2dp)
+$ds-shadow-primitive-level-2-2-offset-y: 1px; // Material Design 3 elevation 2 (2dp)
+$ds-shadow-primitive-level-2-2-blur: 5px; // Material Design 3 elevation 2 (2dp)
+$ds-shadow-primitive-level-2-2-spread: 0; // Material Design 3 elevation 2 (2dp)
+$ds-shadow-primitive-level-3-1-color: rgba(0, 0, 0, 0.2); // Material Design 3 elevation 3 (4dp)
+$ds-shadow-primitive-level-3-1-offset-x: 0; // Material Design 3 elevation 3 (4dp)
+$ds-shadow-primitive-level-3-1-offset-y: 4px; // Material Design 3 elevation 3 (4dp)
+$ds-shadow-primitive-level-3-1-blur: 8px; // Material Design 3 elevation 3 (4dp)
+$ds-shadow-primitive-level-3-1-spread: 0; // Material Design 3 elevation 3 (4dp)
+$ds-shadow-primitive-level-3-2-color: rgba(0, 0, 0, 0.12); // Material Design 3 elevation 3 (4dp)
+$ds-shadow-primitive-level-3-2-offset-x: 0; // Material Design 3 elevation 3 (4dp)
+$ds-shadow-primitive-level-3-2-offset-y: 2px; // Material Design 3 elevation 3 (4dp)
+$ds-shadow-primitive-level-3-2-blur: 6px; // Material Design 3 elevation 3 (4dp)
+$ds-shadow-primitive-level-3-2-spread: 0; // Material Design 3 elevation 3 (4dp)
+$ds-shadow-primitive-level-4-1-color: rgba(0, 0, 0, 0.2); // Material Design 3 elevation 4 (6dp)
+$ds-shadow-primitive-level-4-1-offset-x: 0; // Material Design 3 elevation 4 (6dp)
+$ds-shadow-primitive-level-4-1-offset-y: 6px; // Material Design 3 elevation 4 (6dp)
+$ds-shadow-primitive-level-4-1-blur: 12px; // Material Design 3 elevation 4 (6dp)
+$ds-shadow-primitive-level-4-1-spread: 0; // Material Design 3 elevation 4 (6dp)
+$ds-shadow-primitive-level-4-2-color: rgba(0, 0, 0, 0.12); // Material Design 3 elevation 4 (6dp)
+$ds-shadow-primitive-level-4-2-offset-x: 0; // Material Design 3 elevation 4 (6dp)
+$ds-shadow-primitive-level-4-2-offset-y: 4px; // Material Design 3 elevation 4 (6dp)
+$ds-shadow-primitive-level-4-2-blur: 8px; // Material Design 3 elevation 4 (6dp)
+$ds-shadow-primitive-level-4-2-spread: 0; // Material Design 3 elevation 4 (6dp)
+$ds-shadow-primitive-level-5-1-color: rgba(0, 0, 0, 0.2); // Material Design 3 elevation 5 (8dp+)
+$ds-shadow-primitive-level-5-1-offset-x: 0; // Material Design 3 elevation 5 (8dp+)
+$ds-shadow-primitive-level-5-1-offset-y: 8px; // Material Design 3 elevation 5 (8dp+)
+$ds-shadow-primitive-level-5-1-blur: 16px; // Material Design 3 elevation 5 (8dp+)
+$ds-shadow-primitive-level-5-1-spread: 0; // Material Design 3 elevation 5 (8dp+)
+$ds-shadow-primitive-level-5-2-color: rgba(0, 0, 0, 0.12); // Material Design 3 elevation 5 (8dp+)
+$ds-shadow-primitive-level-5-2-offset-x: 0; // Material Design 3 elevation 5 (8dp+)
+$ds-shadow-primitive-level-5-2-offset-y: 6px; // Material Design 3 elevation 5 (8dp+)
+$ds-shadow-primitive-level-5-2-blur: 12px; // Material Design 3 elevation 5 (8dp+)
+$ds-shadow-primitive-level-5-2-spread: 0; // Material Design 3 elevation 5 (8dp+)
+$ds-shadow-card-1-color: rgba(0, 0, 0, 0.2); // Card elevation
+$ds-shadow-card-1-offset-x: 0; // Card elevation
+$ds-shadow-card-1-offset-y: 1px; // Card elevation
+$ds-shadow-card-1-blur: 2px; // Card elevation
+$ds-shadow-card-1-spread: 0; // Card elevation
+$ds-shadow-card-2-color: rgba(0, 0, 0, 0.12); // Card elevation
+$ds-shadow-card-2-offset-x: 0; // Card elevation
+$ds-shadow-card-2-offset-y: 1px; // Card elevation
+$ds-shadow-card-2-blur: 3px; // Card elevation
+$ds-shadow-card-2-spread: 0; // Card elevation
+$ds-shadow-modal-1-color: rgba(0, 0, 0, 0.2); // Modal/dialog elevation
+$ds-shadow-modal-1-offset-x: 0; // Modal/dialog elevation
+$ds-shadow-modal-1-offset-y: 8px; // Modal/dialog elevation
+$ds-shadow-modal-1-blur: 16px; // Modal/dialog elevation
+$ds-shadow-modal-1-spread: 0; // Modal/dialog elevation
+$ds-shadow-modal-2-color: rgba(0, 0, 0, 0.12); // Modal/dialog elevation
+$ds-shadow-modal-2-offset-x: 0; // Modal/dialog elevation
+$ds-shadow-modal-2-offset-y: 6px; // Modal/dialog elevation
+$ds-shadow-modal-2-blur: 12px; // Modal/dialog elevation
+$ds-shadow-modal-2-spread: 0; // Modal/dialog elevation
+$ds-shadow-dropdown-1-color: rgba(0, 0, 0, 0.2); // Dropdown menu elevation
+$ds-shadow-dropdown-1-offset-x: 0; // Dropdown menu elevation
+$ds-shadow-dropdown-1-offset-y: 4px; // Dropdown menu elevation
+$ds-shadow-dropdown-1-blur: 8px; // Dropdown menu elevation
+$ds-shadow-dropdown-1-spread: 0; // Dropdown menu elevation
+$ds-shadow-dropdown-2-color: rgba(0, 0, 0, 0.12); // Dropdown menu elevation
+$ds-shadow-dropdown-2-offset-x: 0; // Dropdown menu elevation
+$ds-shadow-dropdown-2-offset-y: 2px; // Dropdown menu elevation
+$ds-shadow-dropdown-2-blur: 6px; // Dropdown menu elevation
+$ds-shadow-dropdown-2-spread: 0; // Dropdown menu elevation
+$ds-shadow-popover-1-color: rgba(0, 0, 0, 0.2); // Popover elevation
+$ds-shadow-popover-1-offset-x: 0; // Popover elevation
+$ds-shadow-popover-1-offset-y: 2px; // Popover elevation
+$ds-shadow-popover-1-blur: 4px; // Popover elevation
+$ds-shadow-popover-1-spread: 0; // Popover elevation
+$ds-shadow-popover-2-color: rgba(0, 0, 0, 0.12); // Popover elevation
+$ds-shadow-popover-2-offset-x: 0; // Popover elevation
+$ds-shadow-popover-2-offset-y: 1px; // Popover elevation
+$ds-shadow-popover-2-blur: 5px; // Popover elevation
+$ds-shadow-popover-2-spread: 0; // Popover elevation
+$ds-shadow-tooltip-1-color: rgba(0, 0, 0, 0.2); // Tooltip elevation
+$ds-shadow-tooltip-1-offset-x: 0; // Tooltip elevation
+$ds-shadow-tooltip-1-offset-y: 2px; // Tooltip elevation
+$ds-shadow-tooltip-1-blur: 4px; // Tooltip elevation
+$ds-shadow-tooltip-1-spread: 0; // Tooltip elevation
+$ds-shadow-tooltip-2-color: rgba(0, 0, 0, 0.12); // Tooltip elevation
+$ds-shadow-tooltip-2-offset-x: 0; // Tooltip elevation
+$ds-shadow-tooltip-2-offset-y: 1px; // Tooltip elevation
+$ds-shadow-tooltip-2-blur: 5px; // Tooltip elevation
+$ds-shadow-tooltip-2-spread: 0; // Tooltip elevation
+$ds-shadow-fab-1-color: rgba(0, 0, 0, 0.2); // Floating action button elevation - Material Design 3
+$ds-shadow-fab-1-offset-x: 0; // Floating action button elevation - Material Design 3
+$ds-shadow-fab-1-offset-y: 4px; // Floating action button elevation - Material Design 3
+$ds-shadow-fab-1-blur: 8px; // Floating action button elevation - Material Design 3
+$ds-shadow-fab-1-spread: 0; // Floating action button elevation - Material Design 3
+$ds-shadow-fab-2-color: rgba(0, 0, 0, 0.12); // Floating action button elevation - Material Design 3
+$ds-shadow-fab-2-offset-x: 0; // Floating action button elevation - Material Design 3
+$ds-shadow-fab-2-offset-y: 2px; // Floating action button elevation - Material Design 3
+$ds-shadow-fab-2-blur: 6px; // Floating action button elevation - Material Design 3
+$ds-shadow-fab-2-spread: 0; // Floating action button elevation - Material Design 3
+$ds-shadow-nav-drawer-1-color: rgba(0, 0, 0, 0.2); // Navigation drawer elevation
+$ds-shadow-nav-drawer-1-offset-x: 0; // Navigation drawer elevation
+$ds-shadow-nav-drawer-1-offset-y: 1px; // Navigation drawer elevation
+$ds-shadow-nav-drawer-1-blur: 2px; // Navigation drawer elevation
+$ds-shadow-nav-drawer-1-spread: 0; // Navigation drawer elevation
+$ds-shadow-nav-drawer-2-color: rgba(0, 0, 0, 0.12); // Navigation drawer elevation
+$ds-shadow-nav-drawer-2-offset-x: 0; // Navigation drawer elevation
+$ds-shadow-nav-drawer-2-offset-y: 1px; // Navigation drawer elevation
+$ds-shadow-nav-drawer-2-blur: 3px; // Navigation drawer elevation
+$ds-shadow-nav-drawer-2-spread: 0; // Navigation drawer elevation
+$ds-shadow-elevation-1-1-color: rgba(0, 0, 0, 0.2); // Material Design 3 elevation level 1
+$ds-shadow-elevation-1-1-offset-x: 0; // Material Design 3 elevation level 1
+$ds-shadow-elevation-1-1-offset-y: 1px; // Material Design 3 elevation level 1
+$ds-shadow-elevation-1-1-blur: 2px; // Material Design 3 elevation level 1
+$ds-shadow-elevation-1-1-spread: 0; // Material Design 3 elevation level 1
+$ds-shadow-elevation-1-2-color: rgba(0, 0, 0, 0.12); // Material Design 3 elevation level 1
+$ds-shadow-elevation-1-2-offset-x: 0; // Material Design 3 elevation level 1
+$ds-shadow-elevation-1-2-offset-y: 1px; // Material Design 3 elevation level 1
+$ds-shadow-elevation-1-2-blur: 3px; // Material Design 3 elevation level 1
+$ds-shadow-elevation-1-2-spread: 0; // Material Design 3 elevation level 1
+$ds-shadow-elevation-2-1-color: rgba(0, 0, 0, 0.2);
+$ds-shadow-elevation-2-1-offset-x: 0;
+$ds-shadow-elevation-2-1-offset-y: 2px;
+$ds-shadow-elevation-2-1-blur: 4px;
+$ds-shadow-elevation-2-1-spread: 0;
+$ds-shadow-elevation-2-2-color: rgba(0, 0, 0, 0.12);
+$ds-shadow-elevation-2-2-offset-x: 0;
+$ds-shadow-elevation-2-2-offset-y: 1px;
+$ds-shadow-elevation-2-2-blur: 5px;
+$ds-shadow-elevation-2-2-spread: 0;
+$ds-shadow-elevation-3-1-color: rgba(0, 0, 0, 0.2);
+$ds-shadow-elevation-3-1-offset-x: 0;
+$ds-shadow-elevation-3-1-offset-y: 4px;
+$ds-shadow-elevation-3-1-blur: 8px;
+$ds-shadow-elevation-3-1-spread: 0;
+$ds-shadow-elevation-3-2-color: rgba(0, 0, 0, 0.12);
+$ds-shadow-elevation-3-2-offset-x: 0;
+$ds-shadow-elevation-3-2-offset-y: 2px;
+$ds-shadow-elevation-3-2-blur: 6px;
+$ds-shadow-elevation-3-2-spread: 0;
+$ds-shadow-elevation-4-1-color: rgba(0, 0, 0, 0.2);
+$ds-shadow-elevation-4-1-offset-x: 0;
+$ds-shadow-elevation-4-1-offset-y: 6px;
+$ds-shadow-elevation-4-1-blur: 12px;
+$ds-shadow-elevation-4-1-spread: 0;
+$ds-shadow-elevation-4-2-color: rgba(0, 0, 0, 0.12);
+$ds-shadow-elevation-4-2-offset-x: 0;
+$ds-shadow-elevation-4-2-offset-y: 4px;
+$ds-shadow-elevation-4-2-blur: 8px;
+$ds-shadow-elevation-4-2-spread: 0;
+$ds-shadow-elevation-5-1-color: rgba(0, 0, 0, 0.2); // Material Design 3 elevation level 5
+$ds-shadow-elevation-5-1-offset-x: 0; // Material Design 3 elevation level 5
+$ds-shadow-elevation-5-1-offset-y: 8px; // Material Design 3 elevation level 5
+$ds-shadow-elevation-5-1-blur: 16px; // Material Design 3 elevation level 5
+$ds-shadow-elevation-5-1-spread: 0; // Material Design 3 elevation level 5
+$ds-shadow-elevation-5-2-color: rgba(0, 0, 0, 0.12); // Material Design 3 elevation level 5
+$ds-shadow-elevation-5-2-offset-x: 0; // Material Design 3 elevation level 5
+$ds-shadow-elevation-5-2-offset-y: 6px; // Material Design 3 elevation level 5
+$ds-shadow-elevation-5-2-blur: 12px; // Material Design 3 elevation level 5
+$ds-shadow-elevation-5-2-spread: 0; // Material Design 3 elevation level 5
+$ds-border-default-width: $ds-border-width-thin;
+$ds-border-strong-width: $ds-border-width-medium;
+$ds-border-subtle-width: $ds-border-width-thin;
+$ds-border-focus-ring-width: $ds-border-width-medium;
+$ds-border-divider-width: $ds-border-width-thin;
+$ds-color-surface-default: $ds-color-primitive-neutral-99; // Default surface color - Material Design 3
+$ds-color-surface-variant: $ds-color-primitive-neutral-variant-90; // Surface variant for secondary surfaces
+$ds-color-surface-dim: $ds-color-primitive-neutral-95; // Dimmed surface for subtle backgrounds
+$ds-color-surface-bright: $ds-color-primitive-neutral-100; // Bright surface - highest elevation
+$ds-color-surface-container-lowest: $ds-color-primitive-white; // Lowest container surface
+$ds-color-surface-container-low: $ds-color-primitive-neutral-99;
+$ds-color-surface-container: $ds-color-primitive-neutral-95; // Standard container surface
+$ds-color-surface-container-high: $ds-color-primitive-neutral-90;
+$ds-color-surface-container-highest: $ds-color-primitive-neutral-80; // Highest emphasis container
+$ds-color-on-surface-default: $ds-color-primitive-neutral-10; // Text/icons on surface
+$ds-color-on-surface-variant: $ds-color-primitive-neutral-variant-30; // Lower emphasis text on surface
+$ds-color-primary-default: $ds-color-primitive-primary-500; // Primary brand color
+$ds-color-primary-container: $ds-color-primitive-primary-100; // Primary container background
+$ds-color-primary-on-primary: $ds-color-primitive-white; // Text on primary color
+$ds-color-primary-on-container: $ds-color-primitive-primary-900; // Text on primary container
+$ds-color-primary-hover: $ds-color-primitive-primary-600; // Primary hover state
+$ds-color-primary-focus: $ds-color-primitive-primary-700; // Primary focus state
+$ds-color-primary-active: $ds-color-primitive-primary-800; // Primary active/pressed state
+$ds-color-primary-disabled: $ds-color-primitive-neutral-80; // Primary disabled state
+$ds-color-secondary-default: $ds-color-primitive-secondary-500; // Secondary brand color
+$ds-color-secondary-container: $ds-color-primitive-secondary-100;
+$ds-color-secondary-on-secondary: $ds-color-primitive-white;
+$ds-color-secondary-on-container: $ds-color-primitive-secondary-900;
+$ds-color-secondary-hover: $ds-color-primitive-secondary-600;
+$ds-color-secondary-focus: $ds-color-primitive-secondary-700;
+$ds-color-secondary-active: $ds-color-primitive-secondary-800;
+$ds-color-tertiary-default: $ds-color-primitive-tertiary-500; // Tertiary accent color
+$ds-color-tertiary-container: $ds-color-primitive-tertiary-100;
+$ds-color-tertiary-on-tertiary: $ds-color-primitive-white;
+$ds-color-tertiary-on-container: $ds-color-primitive-tertiary-900;
+$ds-color-tertiary-hover: $ds-color-primitive-tertiary-600;
+$ds-color-error-default: $ds-color-primitive-error-500; // Error/danger color
+$ds-color-error-container: $ds-color-primitive-error-100; // Error container background
+$ds-color-error-on-error: $ds-color-primitive-white;
+$ds-color-error-on-container: $ds-color-primitive-error-900;
+$ds-color-error-hover: $ds-color-primitive-error-600;
+$ds-color-error-focus: $ds-color-primitive-error-700;
+$ds-color-warning-default: $ds-color-primitive-warning-500; // Warning color
+$ds-color-warning-container: $ds-color-primitive-warning-100;
+$ds-color-warning-on-warning: $ds-color-primitive-black;
+$ds-color-warning-on-container: $ds-color-primitive-warning-900;
+$ds-color-warning-hover: $ds-color-primitive-warning-600;
+$ds-color-success-default: $ds-color-primitive-success-500; // Success color
+$ds-color-success-container: $ds-color-primitive-success-100;
+$ds-color-success-on-success: $ds-color-primitive-white;
+$ds-color-success-on-container: $ds-color-primitive-success-900;
+$ds-color-success-hover: $ds-color-primitive-success-600;
+$ds-color-info-default: $ds-color-primitive-info-500; // Info color
+$ds-color-info-container: $ds-color-primitive-info-100;
+$ds-color-info-on-info: $ds-color-primitive-white;
+$ds-color-info-on-container: $ds-color-primitive-info-900;
+$ds-color-info-hover: $ds-color-primitive-info-600;
+$ds-color-outline-default: $ds-color-primitive-neutral-variant-50; // Default outline color for borders
+$ds-color-outline-variant: $ds-color-primitive-neutral-variant-80; // Variant outline for emphasis
+$ds-color-scrim-default: $ds-color-primitive-black; // Scrim overlay color (used with opacity)
+$ds-color-background-default: $ds-color-primitive-neutral-99; // Default page background
+$ds-color-background-on-background: $ds-color-primitive-neutral-10; // Text on background
+$ds-motion-fade-duration: $ds-motion-duration-short-4;
+$ds-motion-fade-easing: $ds-motion-easing-standard;
+$ds-motion-slide-duration: $ds-motion-duration-medium-2;
+$ds-motion-slide-easing: $ds-motion-easing-emphasized-decelerate;
+$ds-motion-scale-duration: $ds-motion-duration-short-3;
+$ds-motion-scale-easing: $ds-motion-easing-emphasized;
+$ds-motion-collapse-duration: $ds-motion-duration-medium-4;
+$ds-motion-collapse-easing: $ds-motion-easing-emphasized-accelerate;
+$ds-motion-expand-duration: $ds-motion-duration-medium-4;
+$ds-motion-expand-easing: $ds-motion-easing-emphasized-decelerate;
+$ds-opacity-hover-overlay: $ds-opacity-primitive-8; // Material Design 3 hover state layer - 8%
+$ds-opacity-focus-overlay: $ds-opacity-primitive-12; // Material Design 3 focus state layer - 12%
+$ds-opacity-active-overlay: $ds-opacity-primitive-12; // Material Design 3 pressed/active state - 12%
+$ds-opacity-disabled: $ds-opacity-primitive-38; // Material Design 3 disabled opacity - 38%
+$ds-opacity-scrim: $ds-opacity-primitive-50; // Scrim/backdrop opacity - 50%
+$ds-radius-button: $ds-radius-primitive-md; // Button border radius
+$ds-radius-card: $ds-radius-primitive-lg; // Card border radius
+$ds-radius-input: $ds-radius-primitive-sm; // Input field border radius
+$ds-radius-modal: $ds-radius-primitive-xl; // Modal/dialog border radius
+$ds-radius-badge: $ds-radius-primitive-full; // Badge pill shape
+$ds-radius-chip: $ds-radius-primitive-md; // Chip border radius
+$ds-radius-avatar: $ds-radius-primitive-full; // Avatar circle shape
+$ds-radius-image: $ds-radius-primitive-lg;
+$ds-radius-tooltip: $ds-radius-primitive-sm;
+$ds-radius-popover: $ds-radius-primitive-md;
+$ds-radius-fab: $ds-radius-primitive-xl; // Floating action button - Material Design 3
+$ds-spacing-component-button-padding-x: $ds-spacing-primitive-8; // Horizontal padding for buttons
+$ds-spacing-component-button-padding-y: $ds-spacing-primitive-4; // Vertical padding for buttons
+$ds-spacing-component-button-gap: $ds-spacing-primitive-4; // Gap between button icon and text
+$ds-spacing-component-card-padding: $ds-spacing-primitive-8; // Card padding - Material Design 3
+$ds-spacing-component-card-gap: $ds-spacing-primitive-6; // Gap between card sections
+$ds-spacing-component-input-padding-x: $ds-spacing-primitive-6;
+$ds-spacing-component-input-padding-y: $ds-spacing-primitive-4;
+$ds-spacing-component-modal-padding: $ds-spacing-primitive-12;
+$ds-spacing-component-modal-gap: $ds-spacing-primitive-8;
+$ds-spacing-component-drawer-padding: $ds-spacing-primitive-8;
+$ds-spacing-component-nav-padding: $ds-spacing-primitive-8;
+$ds-spacing-component-nav-gap: $ds-spacing-primitive-2;
+$ds-spacing-component-header-padding-x: $ds-spacing-primitive-8;
+$ds-spacing-component-header-padding-y: $ds-spacing-primitive-6;
+$ds-spacing-component-footer-padding: $ds-spacing-primitive-12;
+$ds-spacing-component-list-gap: $ds-spacing-primitive-4; // Gap between list items
+$ds-spacing-component-list-item-padding: $ds-spacing-primitive-6;
+$ds-spacing-component-table-cell-padding-x: $ds-spacing-primitive-6;
+$ds-spacing-component-table-cell-padding-y: $ds-spacing-primitive-4;
+$ds-spacing-layout-section-small: $ds-spacing-primitive-16;
+$ds-spacing-layout-section-medium: $ds-spacing-primitive-24;
+$ds-spacing-layout-section-large: $ds-spacing-primitive-32;
+$ds-spacing-layout-container-padding-x: $ds-spacing-primitive-8; // Container horizontal padding
+$ds-spacing-layout-page-padding-top: $ds-spacing-primitive-12;
+$ds-spacing-layout-page-padding-bottom: $ds-spacing-primitive-24;
+$ds-spacing-stack-xs: $ds-spacing-primitive-2; // Extra small vertical stack gap
+$ds-spacing-stack-sm: $ds-spacing-primitive-4;
+$ds-spacing-stack-md: $ds-spacing-primitive-8;
+$ds-spacing-stack-lg: $ds-spacing-primitive-12;
+$ds-spacing-stack-xl: $ds-spacing-primitive-16;
+$ds-spacing-inline-xs: $ds-spacing-primitive-2; // Extra small horizontal inline gap
+$ds-spacing-inline-sm: $ds-spacing-primitive-4;
+$ds-spacing-inline-md: $ds-spacing-primitive-6;
+$ds-spacing-inline-lg: $ds-spacing-primitive-8;
+$ds-z-index-dropdown: $ds-z-index-primitive-10; // Dropdown menus
+$ds-z-index-sticky: $ds-z-index-primitive-100; // Sticky headers/footers
+$ds-z-index-modal-backdrop: $ds-z-index-primitive-300; // Modal backdrop overlay
+$ds-z-index-modal: $ds-z-index-primitive-400; // Modal/dialog
+$ds-z-index-drawer: $ds-z-index-primitive-200; // Navigation drawer
+$ds-z-index-popover: $ds-z-index-primitive-10; // Popover menus
+$ds-z-index-tooltip: $ds-z-index-primitive-500; // Tooltips
+$ds-z-index-toast: $ds-z-index-primitive-9999; // Toast notifications - top layer
+$ds-typography-display-large-size: $ds-font-size-57;
+$ds-typography-display-large-weight: $ds-font-weight-regular;
+$ds-typography-display-large-line-height: $ds-font-line-height-tight;
+$ds-typography-display-large-letter-spacing: $ds-font-letter-spacing-normal;
+$ds-typography-display-medium-size: $ds-font-size-45;
+$ds-typography-display-medium-weight: $ds-font-weight-regular;
+$ds-typography-display-medium-line-height: $ds-font-line-height-tight;
+$ds-typography-display-small-size: $ds-font-size-36;
+$ds-typography-display-small-weight: $ds-font-weight-regular;
+$ds-typography-display-small-line-height: $ds-font-line-height-tight;
+$ds-typography-headline-large-size: $ds-font-size-32;
+$ds-typography-headline-large-weight: $ds-font-weight-regular;
+$ds-typography-headline-large-line-height: $ds-font-line-height-snug;
+$ds-typography-headline-medium-size: $ds-font-size-28;
+$ds-typography-headline-medium-weight: $ds-font-weight-regular;
+$ds-typography-headline-medium-line-height: $ds-font-line-height-snug;
+$ds-typography-headline-small-size: $ds-font-size-24;
+$ds-typography-headline-small-weight: $ds-font-weight-regular;
+$ds-typography-headline-small-line-height: $ds-font-line-height-normal;
+$ds-typography-title-large-size: $ds-font-size-22;
+$ds-typography-title-large-weight: $ds-font-weight-regular;
+$ds-typography-title-large-line-height: $ds-font-line-height-normal;
+$ds-typography-title-medium-size: $ds-font-size-16;
+$ds-typography-title-medium-weight: $ds-font-weight-medium;
+$ds-typography-title-medium-line-height: $ds-font-line-height-normal;
+$ds-typography-title-small-size: $ds-font-size-14;
+$ds-typography-title-small-weight: $ds-font-weight-medium;
+$ds-typography-title-small-line-height: $ds-font-line-height-normal;
+$ds-typography-body-large-size: $ds-font-size-16;
+$ds-typography-body-large-weight: $ds-font-weight-regular;
+$ds-typography-body-large-line-height: $ds-font-line-height-relaxed;
+$ds-typography-body-medium-size: $ds-font-size-14;
+$ds-typography-body-medium-weight: $ds-font-weight-regular;
+$ds-typography-body-medium-line-height: $ds-font-line-height-normal;
+$ds-typography-body-small-size: $ds-font-size-12;
+$ds-typography-body-small-weight: $ds-font-weight-regular;
+$ds-typography-body-small-line-height: $ds-font-line-height-normal;
+$ds-typography-label-large-size: $ds-font-size-14;
+$ds-typography-label-large-weight: $ds-font-weight-medium;
+$ds-typography-label-large-line-height: $ds-font-line-height-normal;
+$ds-typography-label-medium-size: $ds-font-size-12;
+$ds-typography-label-medium-weight: $ds-font-weight-medium;
+$ds-typography-label-medium-line-height: $ds-font-line-height-normal;
+$ds-typography-label-small-size: $ds-font-size-11;
+$ds-typography-label-small-weight: $ds-font-weight-medium;
+$ds-typography-label-small-line-height: $ds-font-line-height-normal;
+$ds-border-default-color: $ds-color-outline-default;
+$ds-border-strong-color: $ds-color-outline-variant;
+$ds-border-subtle-color: $ds-color-surface-container;
+$ds-border-focus-ring-color: $ds-color-primary-default;
+$ds-border-divider-color: $ds-color-outline-default;
