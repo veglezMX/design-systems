@@ -18,7 +18,7 @@ By the end of this guide, you will be able to:
 
 | Audience | Fit Level | Notes |
 |----------|-----------|-------|
-| Design Systems Engineers | ⭐⭐⭐⭐⭐ | Primary audience — full implementation |
+| Design Systems Engineers | ⭐⭐⭐⭐⭐ | Primary audience - full implementation |
 | Front-End Developers | ⭐⭐⭐⭐⭐ | CSS/SCSS/Vanilla Extract focus |
 | Flutter Developers | ⭐⭐⭐⭐ | Dart output + ThemeExtension patterns |
 | Technical Designers | ⭐⭐⭐ | Focus on Phases 1-3 (Figma side) |
@@ -79,7 +79,7 @@ Flutter Developer: "My Color(0xFF0055FF) seems different"
 Six months later: "Which one is actually correct?"
 ```
 
-This is **design drift**—where design files and production code diverge until consistency becomes impossible. The consequences compound across platforms:
+This is **design drift**-where design files and production code diverge until consistency becomes impossible. The consequences compound across platforms:
 
 | Problem | Web Impact | Mobile Impact | Business Impact |
 |---------|------------|---------------|-----------------|
@@ -256,9 +256,9 @@ Think of cooking:
 - **Component** = Specific dishes (chocolate cake uses semantic mappings)
 
 **When to Use Each Tier:**
-- **Start with 2 tiers** (Primitives + Semantic) — this covers 90% of needs
+- **Start with 2 tiers** (Primitives + Semantic) - this covers 90% of needs
 - **Add Component tier** only when you have 50+ components with unique token needs
-- **Never expose Primitives** directly to consumers — always go through Semantic
+- **Never expose Primitives** directly to consumers - always go through Semantic
 
 ### Concept 3: Theme Switching via Semantic Aliasing
 
@@ -343,7 +343,7 @@ Before proceeding, verify you understand:
 - [ ] **Theme Switching**: How do light/dark themes use the same token names?
 - [ ] **sd-transforms**: Why can't Style Dictionary process Tokens Studio JSON directly?
 
-> 💡 **Stuck?** Re-read the section above. These concepts are foundational—rushing past them creates confusion in every subsequent phase.
+> 💡 **Stuck?** Re-read the section above. These concepts are foundational-rushing past them creates confusion in every subsequent phase.
 
 ---
 
@@ -483,6 +483,302 @@ This repository implements a **production-grade, comprehensive token system** ba
 **File Locations:**
 - Source: `tokens/primitives/*.json` and `tokens/semantic/*.json`
 - Output: `build/css/variables.css` (579 CSS custom properties)
+
+---
+
+## 🔀 Two Valid Workflows: Designer-Led vs. Developer-Led
+
+### Understanding the Source of Truth
+
+**The `tokens/*.json` files are the ACTUAL source of truth**, not Figma.
+
+```
+tokens/
+├── primitives/*.json  ← THIS is the source of truth
+└── semantic/*.json    ← THIS is the source of truth
+```
+
+Everything else (Figma, build outputs, documentation) is derived from these JSON files.
+
+---
+
+### Workflow A: Designer-Led (Figma + Tokens Studio)
+
+**Flow:**
+```
+┌─────────────┐      ┌─────────────┐      ┌─────────────┐      ┌─────────────┐
+│   Figma     │      │   Tokens    │      │   GitHub    │      │   Style     │
+│   Design    │  →   │   Studio    │  →   │  tokens/    │  →   │ Dictionary  │
+│             │      │   (Plugin)  │      │  *.json     │      │   Build     │
+└─────────────┘      └─────────────┘      └─────────────┘      └─────────────┘
+  Designer edits       Syncs to GitHub      Source of Truth      Outputs
+  visual UI            (pushes JSON)        (version controlled)  (CSS/SCSS/etc)
+```
+
+**When to use:**
+- Design team owns the design system
+- Designers need visual UI for token management
+- Non-technical stakeholders need to update tokens
+- Have budget for Tokens Studio Pro ($12/month for sync)
+- Want Figma as the editing interface
+
+**How it works:**
+1. Designer opens Figma file
+2. Uses Tokens Studio plugin to edit tokens visually
+3. Plugin syncs changes to GitHub repository (creates/updates JSON files)
+4. CI/CD automatically builds outputs
+5. Apps consume the generated CSS/SCSS/Dart/TS files
+
+**Pros:**
+- Non-technical designers can edit tokens
+- Visual color pickers, spacing previews
+- Tokens can be applied directly to Figma designs
+- Good for design-driven organizations
+
+**Cons:**
+- Requires Tokens Studio Pro subscription
+- Adds Figma as a dependency
+- Slower iteration (edit in Figma → sync → build)
+- Requires learning Tokens Studio interface
+
+---
+
+### Workflow B: Developer-Led (Direct JSON Editing) Recommended for Developers
+
+**Flow:**
+```
+┌──────────────┐      ┌─────────────┐      ┌─────────────┐      ┌─────────────┐
+│   Developer  │      │     Git     │      │   Style     │      │   Apps      │
+│   Edits      │  →   │   Commit    │  →   │ Dictionary  │  →   │  Consume    │
+│ tokens/*.json│      │   & Push    │      │   Build     │      │  Outputs    │
+└──────────────┘      └─────────────┘      └─────────────┘      └─────────────┘
+  Edit JSON files     Version control      Outputs              CSS/SCSS/etc
+  directly in IDE     (source of truth)    (CSS/SCSS/Dart/TS)
+```
+
+**When to use:**
+- **No Tokens Studio access** (your current situation)
+- Development team owns design decisions
+- Prefer code-first workflow
+- Want full control without plugin dependencies
+- Faster iteration cycles
+- Already have the JSON structure (like this repository)
+- Startup/small team with no dedicated design team
+
+**How it works:**
+1. Developer opens `tokens/primitives/colors.json` in VS Code/editor
+2. Edits the JSON directly (add/modify/delete tokens)
+3. Runs `pnpm build` locally to generate outputs
+4. Commits JSON files + build outputs to Git
+5. Apps consume the generated files
+
+**Pros:**
+- ✅ Direct control over tokens
+- ✅ Faster workflow (no Figma roundtrip)
+- ✅ No external dependencies or subscriptions
+- ✅ Standard development workflow (edit → build → commit)
+- ✅ Full Git history and diffs
+- ✅ Can use any text editor/IDE
+- ✅ **Works perfectly without Figma/Tokens Studio**
+
+**Cons:**
+- Requires understanding of JSON/DTCG format
+- No visual UI (text-based editing)
+- Designers may need developer help to edit tokens
+
+---
+
+### Decision Framework: Which Workflow Should You Use?
+
+```
+Do you have Tokens Studio access?
+├── No → Developer-Led Workflow
+└── Yes → Continue...
+
+    Who owns the design system?
+    ├── Design team → Designer-Led Workflow
+    └── Development team → Developer-Led Workflow
+
+    Do designers need to edit tokens directly?
+    ├── Yes → Designer-Led Workflow
+    └── No → Developer-Led Workflow (faster)
+
+    What's your team structure?
+    ├── Design-driven (Adobe, Airbnb) → Designer-Led
+    ├── Eng-driven (GitHub, startups) → Developer-Led
+    └── Hybrid → Start Developer-Led, add Figma later
+```
+
+**Quick Decision Table:**
+
+| Your Situation | Recommended Workflow | Why |
+|----------------|---------------------|-----|
+| **No Tokens Studio/Figma** | Developer-Led | Only option |
+| **Developer-owned system** | Developer-Led | Direct control |
+| **Solo developer/small team** | Developer-Led | Simpler, faster |
+| **Prototyping/MVP** | Developer-Led | Fastest iteration |
+| **Large design team** | Designer-Led | Visual UI for designers |
+| **Enterprise with Figma** | Designer-Led | Design-driven culture |
+| **Already have JSON files** | Developer-Led | You're done! |
+
+---
+
+### Example: Developer-Led Workflow in Action
+
+**Scenario:** You need to add a new accent color and update button spacing.
+
+**Step 1: Edit Primitive Token**
+```bash
+# Open the file in your editor
+vim tokens/primitives/colors.json
+```
+
+```json
+{
+  "color": {
+    "primitive": {
+      "purple": {
+        "500": {
+          "$value": "#9333ea",
+          "$type": "color",
+          "$description": "New accent purple for highlights"
+        },
+        "700": {
+          "$value": "#7e22ce",
+          "$type": "color"
+        }
+      }
+    }
+  }
+}
+```
+
+**Step 2: Reference in Semantic Token**
+```bash
+vim tokens/semantic/colors.json
+```
+
+```json
+{
+  "color": {
+    "accent": {
+      "default": {
+        "$value": "{color.primitive.purple.500}",
+        "$type": "color",
+        "$description": "Accent color for highlights and CTAs"
+      },
+      "hover": {
+        "$value": "{color.primitive.purple.700}",
+        "$type": "color"
+      }
+    }
+  }
+}
+```
+
+**Step 3: Update Button Spacing**
+```bash
+vim tokens/semantic/spacing.json
+```
+
+```json
+{
+  "spacing": {
+    "component": {
+      "button": {
+        "padding-x": {
+          "$value": "{spacing.primitive.10}",
+          "$type": "dimension",
+          "$description": "Updated for better touch targets"
+        }
+      }
+    }
+  }
+}
+```
+
+**Step 4: Build and Verify**
+```bash
+# Build tokens
+pnpm build
+
+# Verify output
+grep "accent" build/css/variables.css
+# --ds-color-primitive-purple-500: #9333ea;
+# --ds-color-primitive-purple-700: #7e22ce;
+# --ds-color-accent-default: var(--ds-color-primitive-purple-500);
+# --ds-color-accent-hover: var(--ds-color-primitive-purple-700);
+
+grep "button-padding" build/css/variables.css
+# --ds-spacing-component-button-padding-x: var(--ds-spacing-primitive-10);
+```
+
+**Step 5: Commit**
+```bash
+git add tokens/ build/
+git commit -m "feat: add purple accent color and update button padding"
+git push
+```
+
+**Step 6: Use in Your App**
+```css
+.button {
+  background: var(--ds-color-accent-default);
+  padding: var(--ds-spacing-component-button-padding-y)
+           var(--ds-spacing-component-button-padding-x);
+}
+
+.button:hover {
+  background: var(--ds-color-accent-hover);
+}
+```
+
+**Total time:** ~5 minutes from idea to production
+
+---
+
+### Can You Switch Workflows Later?
+
+**Yes!** The workflows are interchangeable because they both work with the same JSON files.
+
+**Developer-Led → Designer-Led:**
+1. Your existing `tokens/*.json` files are ready to use
+2. Set up Tokens Studio in Figma
+3. Point Tokens Studio to your GitHub repository
+4. Designers can now edit visually
+5. Same build process continues to work
+
+**Designer-Led → Developer-Led:**
+1. Clone the repository with JSON files from Tokens Studio
+2. Edit JSON files directly instead of using Figma
+3. Same build process continues to work
+
+**The JSON files are the universal format that both workflows share.**
+
+---
+
+### What This Guide Covers
+
+This guide walks you through the **Designer-Led workflow** in Phases 2-3 (Figma/Tokens Studio setup). However, if you prefer the **Developer-Led workflow**, you can **skip those phases entirely**.
+
+**For Developer-Led workflow:**
+- **Skip:** Phase 2 Sections 2.1-2.6 (Figma/Tokens Studio setup)
+- **Create:** Your `tokens/*.json` files directly in your code editor
+- **Start at:** Phase 3 (Build Pipeline) or Phase 4 (Multi-Platform Outputs)
+
+**By following this guide, you will build:**
+- A complete token library defined in JSON files
+- A Style Dictionary configuration for token transformation
+- A working build pipeline (`pnpm build`)
+- Platform-specific outputs (CSS custom properties, SCSS variables, etc.)
+
+---
+
+### Key Takeaway
+
+> 💡 **Figma/Tokens Studio is optional.** The `tokens/*.json` files are the source of truth. You can edit them directly in your code editor, commit to Git, build with Style Dictionary, and ship to production-**no Figma required**.
+
+This repository is **100% functional** for the Developer-Led workflow right now.
 
 ---
 
@@ -867,7 +1163,7 @@ git push -u origin main
 
 #### Verification
 
-Visit `https://github.com/YOUR_USERNAME/design-tokens`—you should see your folder structure.
+Visit `https://github.com/YOUR_USERNAME/design-tokens`-you should see your folder structure.
 
 ---
 
@@ -967,7 +1263,7 @@ Tokens Studio needs permission to push commits. A Personal Access Token (PAT) ac
 
 #### Theory: Starting with Primitives
 
-Primitives are your raw design values—the color palette, spacing scale, typography definitions. They have **no semantic meaning**; they're just named values.
+Primitives are your raw design values-the color palette, spacing scale, typography definitions. They have **no semantic meaning**; they're just named values.
 
 #### Practice
 
@@ -3034,11 +3330,11 @@ git pull origin main
 
 Congratulations! You've built a **production-grade, multi-platform design token pipeline** that:
 
-✅ **Uses W3C standards** — DTCG format ensures future compatibility  
-✅ **Scales to any size** — Three-tier architecture handles growth  
-✅ **Supports all platforms** — CSS, SCSS, Flutter, Vanilla Extract from one source  
-✅ **Enables theming** — Light/dark/brand variants without code changes  
-✅ **Automates everything** — Figma push → production outputs in 2 minutes  
+✅ **Uses W3C standards** - DTCG format ensures future compatibility  
+✅ **Scales to any size** - Three-tier architecture handles growth  
+✅ **Supports all platforms** - CSS, SCSS, Flutter, Vanilla Extract from one source  
+✅ **Enables theming** - Light/dark/brand variants without code changes  
+✅ **Automates everything** - Figma push → production outputs in 2 minutes  
 
 ### The New Workflow
 

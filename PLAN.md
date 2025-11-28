@@ -4,12 +4,14 @@
 
 ## Overview
 
-This plan covers **Style Dictionary build pipeline setup** for transforming design tokens into multi-platform outputs (CSS, SCSS, Dart, TypeScript).
+This plan covers the **Developer-Led workflow** for creating and transforming design tokens into multi-platform outputs (CSS, SCSS, Dart, TypeScript).
 
-**Scope**: Style Dictionary repository configuration and build automation
-**Out of Scope**: Token creation in Figma/Tokens Studio (separate workflow)
-**Input**: DTCG-formatted JSON files in `tokens/` folder
+**Workflow**: Developer-Led (Direct JSON Editing)
+**Scope**: Token creation, Style Dictionary configuration, and build automation
+**Source of Truth**: `tokens/*.json` files edited directly in your code editor
 **Output**: Platform-ready design tokens (CSS, SCSS, Flutter, Vanilla Extract)
+
+> 💡 **Figma/Tokens Studio is optional.** This plan follows the Developer-Led workflow where you create and edit `tokens/*.json` files directly, commit to Git, build with Style Dictionary, and ship to production—**no Figma required**.
 
 ---
 
@@ -98,12 +100,14 @@ node_modules/
 **Time**: 25-30 minutes
 **Prerequisites**: Phase 1 complete, token JSON files exist in tokens/
 
-### Token Files Assumption
-This phase assumes you have DTCG-formatted JSON files:
-- [ ] Verify `tokens/primitives/*.json` files exist
-- [ ] Verify `tokens/semantic/*.json` files exist
-- [ ] Open any JSON file and confirm `$value`, `$type` syntax (DTCG format)
-- [ ] If tokens don't exist yet: Create sample files or wait for Figma sync
+### Token Files Requirement
+This phase requires DTCG-formatted JSON files. If they don't exist, create them now:
+- [ ] Create `tokens/primitives/*.json` files (colors, spacing, typography, etc.)
+- [ ] Create `tokens/semantic/*.json` files (semantic mappings referencing primitives)
+- [ ] Use DTCG format with `$value`, `$type` syntax
+- [ ] Reference primitives from semantic tokens using `{path.to.token}` syntax
+
+> 📝 **Developer-Led Workflow**: Edit JSON files directly in your code editor. See `design-tokens-guide-2025.md` for DTCG format examples and the three-tier token hierarchy (Primitives → Semantic → Component).
 
 ### Create Basic Configuration File
 - [ ] Create `src/style-dictionary.config.mjs`
@@ -409,7 +413,7 @@ export type Tokens = typeof tokens;
 - [ ] Check for `tokens/themes/dark.json`
 - [ ] Verify theme files contain semantic overrides
 - [ ] Verify themes reference primitives (not hardcoded values)
-- [ ] If themes don't exist: Create sample or wait for Figma sync
+- [ ] If themes don't exist: Create them directly in your code editor following DTCG format
 
 ### Restructure Configuration for Themes
 - [ ] Open `src/style-dictionary.config.mjs`
@@ -973,8 +977,8 @@ export const tokens = {
 
 - **Time Investment**: ~2-3 hours total
 - **Reference Guide**: See `design-tokens-guide-2025.md` for detailed explanations
-- **Token Source**: Tokens come from Figma/Tokens Studio (separate workflow)
-- **DTCG Format**: Assumed for all source tokens
+- **Token Source**: Created and edited directly in `tokens/*.json` files (Developer-Led workflow)
+- **DTCG Format**: Required for all source tokens (`$value`, `$type` syntax)
 - **Updates**: Check boxes as you complete each item
 
 **Implementation Date**: [Add date when starting]
@@ -985,12 +989,16 @@ export const tokens = {
 
 ## 🔗 Related Workflows
 
-This plan covers **Style Dictionary build pipeline** only.
+This plan covers the **Developer-Led workflow** (token creation + Style Dictionary build pipeline).
 
-**Related workflows** (separate plans):
-1. **Token Creation**: Figma + Tokens Studio token definition
-2. **Token Sync**: Tokens Studio → GitHub synchronization
-3. **Token Consumption**: How apps import and use the tokens
-4. **Design QA**: Verifying design-code parity
+**What this plan includes:**
+1. **Token Creation**: Creating `tokens/*.json` files directly in your code editor
+2. **Build Pipeline**: Style Dictionary configuration and automation
+3. **Multi-Platform Output**: CSS, SCSS, Flutter, Vanilla Extract generation
 
-**Current Focus**: Build automation and transformation pipeline
+**Related workflows** (optional, separate plans):
+1. **Designer-Led Workflow**: Figma + Tokens Studio setup (see `design-tokens-guide-2025.md` Phase 2)
+2. **Token Consumption**: How apps import and use the generated tokens
+3. **Design QA**: Verifying design-code parity
+
+**Current Focus**: Developer-Led token creation and build automation
