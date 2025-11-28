@@ -22,8 +22,8 @@ Thumbs.db
 .env.local
 .env.*.local
 
-# Build output (optional - uncomment if not committing build files)
-# build/
+# Build output
+build/
 
 # Temporary files
 *.tmp
