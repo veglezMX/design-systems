@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build output (optional - uncomment if not committing build files)
+# build/
+
+# Temporary files
+*.tmp
+.cache/
